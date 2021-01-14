@@ -2,32 +2,28 @@
   <div class="home-description">
     <div class="words">
       <div class="title">
-        <div v-if="this.$store.getters.lan">Accountants you can trust</div>
-        <div v-else>你值得信赖</div>
+        <div v-if="this.$store.getters.lan">
+          {{this.$store.state.homepage_description.title.eng}}
+        </div>
+        <div v-else>{{this.$store.state.homepage_description.title.chi}}</div>
       </div>
       <div class="content">
         <div v-if="this.$store.getters.lan">
-          We put our clients at the centre of everything we do and our systems
-          and processes are designed to help us look after you throughout your
-          business journey. We advise ambitious and dynamic businesses, social
-          enterprises, not for profit organisations, private individuals and
-          families on all aspects of business, tax and growth. We will be with
-          you every step of the way, making your life easier and offering great
-          advice to help you achieve your dreams.
+          {{this.$store.state.homepage_description.content.eng}}
         </div>
         <div v-else>
-          中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介中文简介
+          {{this.$store.state.homepage_description.content.chi}}
         </div>
       </div>
     </div>
-    <home-serve />
+    <home-service />
   </div>
 </template>
 
 <script>
-import homeServe from "./homeServe.vue";
+import homeService from "./homeService.vue";
 export default {
-  components: { homeServe },
+  components: { homeService },
 };
 </script>
 

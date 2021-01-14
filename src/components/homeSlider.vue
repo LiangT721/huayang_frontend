@@ -4,12 +4,12 @@
       <img src="../assets/Slide.jpg" alt="" class="bg" />
       <div class="text">
         <div class="slogen">
-          <div v-if="this.$store.getters.lan">SLOGEN SLOGEN SLOGEN SLOGEN SLOGEN</div>
-          <div v-else>大标语</div>
+          <div v-if="this.$store.getters.lan">{{this.$store.state.slogen.slogen.eng}}</div>
+          <div v-else>{{this.$store.state.slogen.slogen.chi}}</div>
         </div>
         <div class="sub-slogen">
-          <div v-if="this.$store.getters.lan">Small Business Accounting services</div>
-          <div v-else>小标语</div>
+          <div v-if="this.$store.getters.lan">{{this.$store.state.slogen.sub_slogen.eng}}</div>
+          <div v-else>{{this.$store.state.slogen.sub_slogen.chi}}</div>
         </div>
       </div>
     </div>

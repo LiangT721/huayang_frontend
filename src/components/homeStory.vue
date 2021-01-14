@@ -2,24 +2,17 @@
   <div class="story">
     <div class="title">
       <div v-if="this.$store.getters.lan">
-        The #1 Small Business Accounting Services Firm
+        {{this.$store.state.story.title.eng}}
       </div>
-      <div v-else>NO.1 小业主服务</div>
+      <div v-else>{{this.$store.state.story.title.chi}}</div>
     </div>
     <div class="content">
       <div class="text">
         <div v-if="this.$store.getters.lan">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam
-          aliquid necessitatibus doloremque architecto. Nisi quasi tempora
-          voluptates sequi. Quis expedita reprehenderit veniam numquam quo
-          consequuntur eos itaque ipsum libero rem sunt cupiditate eum iusto
-          mollitia voluptatem optio vitae porro cum fuga, quia animi nostrum
-          aliquam a eaque! Pariatur, assumenda delectus optio vel, fugiat hic
-          quam at tempora accusamus quibusdam nesciunt possimus, sit magni
-          asperiores perspiciatis?
+          {{this.$store.state.story.content.eng}}
         </div>
         <div v-else>
-          中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事中文故事
+          {{this.$store.state.story.content.chi}}
         </div>
       </div>
       <div class="img">
