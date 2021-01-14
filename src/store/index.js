@@ -4,8 +4,15 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+    state: {
+        language: "Eng"
+    },
+    mutations: {},
+    actions: {},
+    modules: {},
+    getters: {
+        lan: state => {
+            return state.language;
+        }
+    }
 });
