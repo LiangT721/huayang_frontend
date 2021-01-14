@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        language: true,
+
         slogen: {
             slogen: {
                 eng: "Lorem ipsum dolor sit amet consectetur",
@@ -53,7 +53,9 @@ export default new Vuex.Store({
                 eng: "project4",
                 chi: "服务4"
             },
-        }
+        },
+        language: true,
+
     },
     mutations: {
         language_toggle: (state, data) => {
@@ -65,6 +67,15 @@ export default new Vuex.Store({
     getters: {
         lan: state => {
             return state.language;
+        },
+        device: () => {
+            if (window.innerWidth < 768) {
+                return "mobile"
+            } else if (window.innerWidth < 1280) {
+                return "pad"
+            } else {
+                return "pc"
+            }
         }
     }
 });

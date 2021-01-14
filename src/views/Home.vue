@@ -22,7 +22,11 @@ export default {
     HomeStory,
     HomeDescription,
     PageFooter
-  }
+  },
+  mounted () {
+    console.log(screen.width);
+    console.log(window.innerWidth);
+  },
 };
 </script>
 
@@ -43,6 +47,9 @@ export default {
     box-sizing: border-box;
   }
   
+}
+@media only screen and (min-width: 768px) {
+
 }
 
 </style>

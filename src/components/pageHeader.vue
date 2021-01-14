@@ -9,11 +9,18 @@
           <div class="eng">YANG GAO. CdivA P.C Ltd.</div>
         </div>
       </div>
-      <div class="menu-btn" @click="menu_toggle" >
-        <img src="../assets/menu.png" alt="">
+      <menu-bar v-if="this.$store.getters.device != 'mobile'" />
+      <div
+        v-if="this.$store.getters.device == 'mobile'"
+        class="menu-btn"
+        @click="menu_toggle"
+      >
+        <img src="../assets/menu.png" alt="" />
       </div>
     </div>
-    <menu-bar v-if="this.menu_show" />
+    <transition>
+      <menu-bar v-if="this.menu_show" />
+    </transition>
   </div>
 </template>
 
@@ -24,13 +31,16 @@ export default {
   components: { topShow, MenuBar },
   data() {
     return {
-      menu_show: "false"
-    }
+      menu_show: false,
+    };
   },
   methods: {
     menu_toggle() {
-      this.menu_show =! this.menu_show
-    }
+      this.menu_show = !this.menu_show;
+    },
+  },
+  mounted() {
+    console.log(this.$store.getters.device);
   },
 };
 </script>
@@ -43,43 +53,62 @@ export default {
 }
 
 .top-show {
+  position: relative;
+  z-index: 99;
   width: 100%;
   height: 3em;
   background-color: $bgc;
 }
 
 .header-bar {
+  position: relative;
+  z-index: 99;
   box-sizing: border-box;
   padding: 0 2em;
   height: 5em;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
+  background-color: $barColor;
   .logo-set {
     height: 3em;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    .logo{
+    .logo {
       height: 3em;
     }
-    .text{
+    .text {
       color: #ffffff;
       font-size: 0.8rem;
       display: grid;
       align-items: center;
     }
   }
-  .menu-btn{
+  .menu-btn {
     justify-self: right;
-    >img{
+    > img {
       height: 2em;
     }
   }
 }
-.menu-bar{
-  z-index: 99;
-  width: 100%;
-  height: fit-content;
-  background-color: rgba($color: #a7c6e6, $alpha: 0.7);
+
+.v-enter,
+.v-leave-to {
+  transform: translateY(-100%);
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s linear;
+}
+
+@media only screen and (min-width: 768px) {
+  .top-show {
+    background-color: $barColor;
+  }
+  .header-bar {
+    padding: 0 5em;
+    height: 5em;
+    grid-template-columns: 2fr 3fr;
+  }
 }
 </style>
