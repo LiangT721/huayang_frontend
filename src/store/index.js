@@ -5,9 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        language: "Eng"
+        language: true
     },
-    mutations: {},
+    mutations: {
+        language_toggle: (state, data) => {
+            state.language = data
+        }
+    },
     actions: {},
     modules: {},
     getters: {
