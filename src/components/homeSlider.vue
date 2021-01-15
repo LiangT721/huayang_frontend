@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <hooper class="frame" :autoPlay="true" :playSpeed="3000">
+    <hooper class="frame" :autoPlay="true" :playSpeed="3000" :transition="1000">
       <slide class="image-set">
         <img src="../assets/Slide.jpg" alt="" class="bg" />
         <div class="text">
