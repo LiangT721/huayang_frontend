@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <top-show />
+    <top-show v-if="this.$store.getters.device != 'pc'" />
     <div class="header-bar">
       <div class="logo-set">
         <img src="../assets/logo.png" alt="" class="logo" />
@@ -17,6 +17,7 @@
       >
         <img src="../assets/menu.png" alt="" />
       </div>
+      <top-show v-if="this.$store.getters.device == 'pc'" />
     </div>
     <transition>
       <menu-bar v-if="this.menu_show" />
@@ -50,14 +51,10 @@ export default {
 
 .header {
   position: relative;
-}
-
-.top-show {
-  position: relative;
-  z-index: 99;
-  width: 100%;
-  height: 3em;
-  background-color: $bgc;
+  z-index: 1;
+  width: 100vw;
+  height: 8em;
+  background-color: $barColor;
 }
 
 .header-bar {
@@ -109,6 +106,33 @@ export default {
     padding: 0 5em;
     height: 5em;
     grid-template-columns: 2fr 3fr;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header {
+    height: 6em;
+    width: 100%;
+  }
+  .header-bar {
+    grid-template-columns: 2fr 3fr 1fr;
+    height: 100%;
+    .logo-set {
+      justify-self: center;
+      height: 4em;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      .logo {
+        height: 4em;
+      }
+      .text {
+        height: 3em;
+        margin-top: 0.3em;
+        color: #ffffff;
+        font-size: 1rem;
+        display: grid;
+        align-items: center;
+      }
+    }
   }
 }
 </style>

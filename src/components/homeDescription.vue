@@ -1,22 +1,23 @@
 <template>
   <div class="home-description">
+    <home-service v-if="this.$store.getters.device == 'pc'" />
     <div class="words">
       <div class="title">
         <div v-if="this.$store.getters.lan">
-          {{this.$store.state.homepage_description.title.eng}}
+          {{ this.$store.state.homepage_description.title.eng }}
         </div>
-        <div v-else>{{this.$store.state.homepage_description.title.chi}}</div>
+        <div v-else>{{ this.$store.state.homepage_description.title.chi }}</div>
       </div>
       <div class="content">
         <div v-if="this.$store.getters.lan">
-          {{this.$store.state.homepage_description.content.eng}}
+          {{ this.$store.state.homepage_description.content.eng }}
         </div>
         <div v-else>
-          {{this.$store.state.homepage_description.content.chi}}
+          {{ this.$store.state.homepage_description.content.chi }}
         </div>
       </div>
     </div>
-    <home-service />
+    <home-service v-if="this.$store.getters.device != 'pc'" />
   </div>
 </template>
 
@@ -40,6 +41,7 @@ export default {
     > div {
       font-family: $title;
       font-size: 2rem;
+      color: $fontBlue;
       width: 70vw;
       margin-left: 15vw;
     }
@@ -52,6 +54,50 @@ export default {
       font-size: 0.9rem;
       width: 70vw;
       margin-left: 15vw;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .words {
+    .title {
+      > div {
+        text-align: center;
+      }
+    }
+    .content {
+      > div {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .home-description {
+    grid-template-columns: auto auto;
+    align-items: center;
+    width: 100%;
+    padding:5em 0;
+    box-sizing: border-box;
+  }
+  .words {
+    .title {
+      > div {
+        font-family: $title;
+        font-size: 2rem;
+        color: $fontBlue;
+        width: 40vw;
+        margin-left: 10%;
+      }
+    }
+    .content {
+        box-sizing: border-box;
+
+      > div {
+        font-size: 1.2rem;
+        width: 40vw;
+        margin-left: 10%;
+        line-height: 2em;
+      }
     }
   }
 }

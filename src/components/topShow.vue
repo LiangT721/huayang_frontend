@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import "ant-design-vue/lib/date-picker/style/css"
+import "ant-design-vue/lib/date-picker/style/css";
 export default {
   data() {
     return {
@@ -55,12 +55,18 @@ export default {
   grid-template-columns: 1.2fr 1fr;
   align-items: center;
   padding: 0 1em;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: 3em;
+  background-color: $bgc;
 }
 .phone,
 a {
   font-size: 1.1rem;
   color: $fontBlue;
   font-family: $title;
+  cursor: pointer;
   // margin-top: 1em;
 }
 .language-set {
@@ -72,6 +78,7 @@ a {
     border-radius: 2px;
     > div {
       padding: 0 0.2em;
+      cursor: pointer;
     }
     .eng {
       border-right: 1px solid #d1d1d1;
@@ -91,23 +98,47 @@ a {
   color: $darkColor;
 }
 @media only screen and (min-width: 768px) {
-.top-show {
-  grid-template-columns: 3fr 1fr;
-  align-items: end;
-  height: 3em;
-  justify-items: center;
+  .top-show {
+    grid-template-columns: 5fr 1fr;
+    padding: 0 5em;
+    align-items: center;
+    height: 3em;
+    justify-items: right;
+  }
+  .phone,
+  a {
+    font-size: 1rem;
+    color: #ffff;
+    text-shadow: 1px 1px 1px rgb(112, 112, 112);
+  }
+  .language-set {
+    font-size: 0.6rem;
+    margin-right: 1em;
+  }
 }
-}
-.phone,
-a {
-  font-size: 1.2rem;
-  color: #ffff;
-  text-shadow: 1px 1px 1px rgb(112, 112, 112);
-}
-.language-set {
-  margin-top: 10px;
-  font-size: 0.6rem;
-  align-self: center;
-  filter: drop-shadow(1px 1px 5px 1px white);
+@media only screen and (min-width: 1280px) {
+  .top-show {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    // row-gap: 1em;
+    padding: 0.5em 0;
+    height: 6em;
+  }
+  .phone,
+  a {
+    font-size: 1rem;
+    transition: all 0.2s linear;
+    &:hover {
+      text-shadow: 3px 3px 5px rgba(242, 242, 242, 0.5);
+      transform: scale(1.1);
+    }
+  }
+  .language-set {
+    margin: 0;
+    font-size: 0.8rem;
+    justify-self: center;
+  }
 }
 </style>

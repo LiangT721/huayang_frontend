@@ -32,24 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-
-.home{
-  .header{
-    z-index: 1;
-    width: 100vw;
-    height: 8em;
-    background-color: $barColor;
-  }
-  .slider{
-    z-index: -1;
-    width: 100vw;
-    height: 80vh;
-    box-sizing: border-box;
-  }
-  
-}
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 1280px) {}
 
 </style>

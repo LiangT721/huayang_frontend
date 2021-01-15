@@ -2,6 +2,15 @@
   <div class="footer">
     <div class="top">
       <div class="content">
+        <div class="logo" v-if="this.$store.getters.device != 'mobile'">
+          <div class="logo-set">
+            <img src="../assets/logo.png" alt="" class="logo" />
+            <div class="text">
+              <div class="chi">華楊會計師事務所</div>
+              <div class="eng">YANG GAO. CdivA P.C Ltd.</div>
+            </div>
+          </div>
+        </div>
         <div class="contact">
           <div class="part1">
             <div class="phone">
@@ -49,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="logo">
+      <div class="logo" v-if="this.$store.getters.device == 'mobile'">
         <div class="logo-set">
           <img src="../assets/logo.png" alt="" class="logo" />
           <div class="text">
@@ -133,6 +142,59 @@ export default {};
     color: white;
     font-size: 0.6rem;
     padding: 2px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .top {
+    margin: 0 1em;
+    font-size: 0.7rem;
+    height: 5em;
+    .content {
+      grid-template-columns: 1.2fr 2.5fr 1fr;
+      width: 100%;
+      margin-left: 0;
+      align-items: center;
+      .contact {
+        width: 90%;
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+  .logo-set {
+    height: 2.5em;
+    margin-left: 1em;
+    .logo {
+      height: 3em;
+    }
+    .text {
+      color: #ffffff;
+      font-size: 0.7rem;
+      display: grid;
+      align-items: center;
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer {
+    width: 100%;
+    padding-top:5px;
+  }
+  .top {
+    margin: 1em 15vw;
+    .content {
+      grid-template-columns: 2fr 2.5fr 1fr;
+      .logo-set {
+        margin-left: 5vw;
+      }
+       .contact {
+        width: 90%;
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
 }
 </style>

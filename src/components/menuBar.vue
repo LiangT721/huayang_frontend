@@ -1,22 +1,22 @@
 <template>
   <div class="menu-bar">
-    <div>
+    <div :class="{ selected: home }" @click="homePage">
       <div v-if="this.$store.getters.lan">HOME</div>
       <div v-else>主页</div>
     </div>
-    <div>
+    <div :class="{ selected: about }" @click="aboutPage">
       <div v-if="this.$store.getters.lan">ABOUT US</div>
       <div v-else>关于我们</div>
     </div>
-    <div>
+    <div :class="{ selected: service }">
       <div v-if="this.$store.getters.lan">SERVICES</div>
       <div v-else>服务</div>
     </div>
-    <div>
+    <div :class="{ selected: resource }">
       <div v-if="this.$store.getters.lan">RESOURCE</div>
       <div v-else>资源</div>
     </div>
-    <div>
+    <div :class="{ selected: contact }">
       <div v-if="this.$store.getters.lan">CONTACT US</div>
       <div v-else>联系我们</div>
     </div>
@@ -24,7 +24,33 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      home: false,
+      about:false,
+      service:false,
+      resource:false,
+      contact:false
+    }
+  },
+  methods: {
+    homePage() {
+      this.$router.push("/");
+    },
+    aboutPage() {
+      this.$router.push("/about");
+    },
+  },
+  mounted () {
+    console.log(this.$router.history.current.name)
+    if(this.$router.history.current.name == "Home"){
+      this.home = true
+    } else if(this.$router.history.current.name == "About"){
+      this.about = true
+    }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -42,6 +68,7 @@ export default {};
     height: 3em;
     display: grid;
     align-items: center;
+    cursor: pointer;
     &:hover {
       background-color: #fff;
     }
@@ -57,16 +84,34 @@ export default {};
     grid-template-columns: repeat(5, auto);
     background-color: rgba($color: #a7c6e6, $alpha: 0);
     > div {
+      box-sizing: border-box;
+      margin: 0 2px;
       color: white;
       font-size: 0.8rem;
       height: 2em;
       width: auto;
       border-radius: 5px;
+
       &:hover {
         background-color: #fff;
         color: $barColor;
       }
     }
   }
+}
+@media only screen and (min-width: 1280px) {
+  .menu-bar {
+    width: 90%;
+    > div {
+      transition: all 0.3s ease-in-out;
+      font-size: 1rem;
+      // border: 1px solid #fff;
+    }
+  }
+}
+.selected {
+  background-color: #fff;
+  >div{color: $barColor;}
+  cursor: auto;
 }
 </style>
