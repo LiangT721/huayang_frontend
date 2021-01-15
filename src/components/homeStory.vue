@@ -1,20 +1,24 @@
 <template>
   <div class="story">
     <div class="title">
-      <div v-if="this.$store.getters.lan">
-        {{ this.$store.state.story.title.eng }}
-      </div>
-      <div v-else>{{ this.$store.state.story.title.chi }}</div>
+      <vue-aos animation-class="animate__slideInRight">
+        <div v-if="this.$store.getters.lan">
+          {{ this.$store.state.story.title.eng }}
+        </div>
+        <div v-else>{{ this.$store.state.story.title.chi }}</div>
+      </vue-aos>
     </div>
     <div class="content">
-      <div class="text">
-        <div v-if="this.$store.getters.lan">
-          {{ this.$store.state.story.content.eng }}
+      <vue-aos animation-class="animate__heartBeat">
+        <div class="text">
+          <div v-if="this.$store.getters.lan">
+            {{ this.$store.state.story.content.eng }}
+          </div>
+          <div v-else>
+            {{ this.$store.state.story.content.chi }}
+          </div>
         </div>
-        <div v-else>
-          {{ this.$store.state.story.content.chi }}
-        </div>
-      </div>
+      </vue-aos>
       <div class="img">
         <img src="../assets/story.webp" alt="" />
       </div>
@@ -23,7 +27,10 @@
 </template>
 
 <script>
-export default {};
+import VueAos from "vue-aos";
+export default {
+  components: { VueAos },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -94,7 +101,7 @@ export default {};
     align-items: center;
     justify-items: center;
     width: 100%;
-  
+
     .text {
       > div {
         font-family: $text;
@@ -105,7 +112,7 @@ export default {};
       }
     }
     .img {
-      width:30vw;
+      width: 30vw;
       height: 100%;
       > img {
         width: 30vw;

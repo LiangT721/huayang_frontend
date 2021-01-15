@@ -8,15 +8,15 @@
       <div v-if="this.$store.getters.lan">ABOUT US</div>
       <div v-else>关于我们</div>
     </div>
-    <div :class="{ selected: service }">
+    <div :class="{ selected: service }" @click="servicePage">
       <div v-if="this.$store.getters.lan">SERVICES</div>
       <div v-else>服务</div>
     </div>
-    <div :class="{ selected: resource }">
+    <div :class="{ selected: resource }" @click="resourcePage">
       <div v-if="this.$store.getters.lan">RESOURCE</div>
       <div v-else>资源</div>
     </div>
-    <div :class="{ selected: contact }">
+    <div :class="{ selected: contact }" @click="contactPage">
       <div v-if="this.$store.getters.lan">CONTACT US</div>
       <div v-else>联系我们</div>
     </div>
@@ -41,6 +41,15 @@ export default {
     aboutPage() {
       this.$router.push("/about");
     },
+    servicePage() {
+      this.$router.push("/service");
+    },
+    resourcePage() {
+      this.$router.push("/resource");
+    },
+    contactPage() {
+      this.$router.push("/contact");
+    },
   },
   mounted () {
     console.log(this.$router.history.current.name)
@@ -48,6 +57,12 @@ export default {
       this.home = true
     } else if(this.$router.history.current.name == "About"){
       this.about = true
+    }else if(this.$router.history.current.name == "Service"){
+      this.service = true
+    }else if(this.$router.history.current.name == "Resource"){
+      this.resource = true
+    }else if(this.$router.history.current.name == "Contact"){
+      this.contact = true
     }
   },
 };
