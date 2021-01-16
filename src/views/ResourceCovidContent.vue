@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="res-cov-con">
         <page-header />
         <resource-bar />
         <resource-content />
@@ -19,5 +19,8 @@ import ResourceContent from '../components/resourceContent.vue'
 </script>
 
 <style lang="scss" scoped>
-
+.res-cov-con{
+    position: relative;
+    min-height: 100vh;
+}
 </style>

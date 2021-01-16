@@ -67,6 +67,7 @@ export default {
     }
     > img {
       height: 1rem;
+      cursor: pointer;
     }
   }
   li {
@@ -75,6 +76,21 @@ export default {
     width: 90%;
     margin: 1em 0 1em 10%;
     cursor: pointer;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu {
+    width: 70%;
+    margin: 2em 0 6em 15%;
+    li{
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .menu {
+    width: 60%;
+    margin: 2em 0 6em 20%;
   }
 }
 </style>

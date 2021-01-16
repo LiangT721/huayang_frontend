@@ -21,10 +21,12 @@ import ResourceBar from '../components/resourceBar.vue'
 <style lang="scss" scoped>
 .res-cov{
     position: relative;
+    min-height: 100vh;
 }
 .content {
   width: 80%;
   margin: 2em 0 2em 10%;
   min-height: 38vh;
 }
+
 </style>

@@ -20,12 +20,13 @@
 .bar{
     width: 100%;
     height: 12vh;
-    background-color: $pageTopBarColor;
+    // background-color: $pageTopBarColor;
     display: grid;
     align-items: center;
     justify-items: center;
     font-family: $title;
     font-size: 2rem;
+    background-image: url("../assets/blue-watercolor-texture-background.jpg");
 }
 
 </style>

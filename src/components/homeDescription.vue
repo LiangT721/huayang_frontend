@@ -34,7 +34,8 @@ export default {
 .home-description {
   width: 100vw;
   display: grid;
-  padding: 5em 0;
+  padding: 20em 0;
+  // margin-bottom: 25em;
 }
 .words {
   .title {
@@ -58,6 +59,10 @@ export default {
   }
 }
 @media only screen and (min-width: 768px) {
+  
+.home-description {
+  padding: 12em 0;
+}
   .words {
     .title {
       > div {
@@ -76,7 +81,7 @@ export default {
     grid-template-columns: auto auto;
     align-items: center;
     width: 100%;
-    padding:5em 0;
+    padding:5em 0 15em 0;
     box-sizing: border-box;
   }
   .words {

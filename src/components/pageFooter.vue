@@ -83,6 +83,8 @@ export default {};
 @import "../assets/style.scss";
 
 .footer {
+  position: absolute;
+  bottom: 0;
   padding-top: 1em;
   z-index: 1;
   width: 100vw;

@@ -25,5 +25,6 @@ export default {
 <style lang="scss" scoped>
 .resource {
   position: relative;
+  min-height: 100vh;
 }
 </style>

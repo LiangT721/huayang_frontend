@@ -62,12 +62,14 @@ export default {
   }
   > img {
     height: 1rem;
+    cursor: pointer;
   }
 }
 .covid {
   width: 80%;
   margin-left: 10%;
   margin-top: 2em;
+  padding-bottom: 20em;
   min-height: 45vh;
 }
 
@@ -79,14 +81,23 @@ export default {
 @media only screen and (min-width: 768px) {
   .covid {
     width: 70%;
-    margin: 6em 0 6em 15%;
+    margin: 2em 0 6em 15%;
+      padding-bottom: 10em;
+  }
+  .content {
+    width: 90%;
+    margin-left: 5%;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .covid {
     width: 60%;
-    margin: 6em 0 6em 20%;
+    margin: 2em 0 6em 20%;
+  }
+    .content {
+    width: 80%;
+    margin-left: 10%;
   }
 }
 </style>

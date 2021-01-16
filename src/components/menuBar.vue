@@ -12,9 +12,29 @@
       <div v-if="this.$store.getters.lan">SERVICES</div>
       <div v-else>服务</div>
     </div>
-    <div :class="{ selected: resource }" @click="resourcePage">
+    <div
+      class="resource"
+      :class="{ selected: resource }"
+      @click="resourcePage"
+      @mouseover="resourceMenuShow"
+      @mouseleave="resourceMenuHide"
+    >
       <div v-if="this.$store.getters.lan">RESOURCE</div>
       <div v-else>资源</div>
+      <div
+        class="dropdown"
+        id="res-dropdown"
+        v-if="this.$store.getters.device == 'pc'"
+      >
+        <div class="news">
+          <div v-if="this.$store.getters.lan">NEWS</div>
+          <div v-else>新闻</div>
+        </div>
+        <div class="covid" @click="covidPage">
+          <div v-if="this.$store.getters.lan">COVID-19</div>
+          <div v-else>有关新冠</div>
+        </div>
+      </div>
     </div>
     <div :class="{ selected: contact }" @click="contactPage">
       <div v-if="this.$store.getters.lan">CONTACT US</div>
@@ -28,11 +48,12 @@ export default {
   data() {
     return {
       home: false,
-      about:false,
-      service:false,
-      resource:false,
-      contact:false
-    }
+      about: false,
+      service: false,
+      resource: false,
+      contact: false,
+      // resourceMenu:false
+    };
   },
   methods: {
     homePage() {
@@ -50,19 +71,30 @@ export default {
     contactPage() {
       this.$router.push("/contact");
     },
+    covidPage() {
+      this.$router.push("/resource/covid19");
+    },
+    resourceMenuShow() {
+      const resource = document.getElementById("res-dropdown");
+      resource.style.opacity = "1";
+    },
+    resourceMenuHide() {
+      const resource = document.getElementById("res-dropdown");
+      resource.style.opacity = "0";
+    },
   },
-  mounted () {
-    console.log(this.$router.history.current.name)
-    if(this.$router.history.current.name == "Home"){
-      this.home = true
-    } else if(this.$router.history.current.name == "About"){
-      this.about = true
-    }else if(this.$router.history.current.name == "Service"){
-      this.service = true
-    }else if(this.$router.history.current.name == "Resource"){
-      this.resource = true
-    }else if(this.$router.history.current.name == "Contact"){
-      this.contact = true
+  mounted() {
+    console.log(this.$router.history.current.name);
+    if (this.$router.history.current.name == "Home") {
+      this.home = true;
+    } else if (this.$router.history.current.name == "About") {
+      this.about = true;
+    } else if (this.$router.history.current.name == "Service") {
+      this.service = true;
+    } else if (this.$router.history.current.name == "Resource") {
+      this.resource = true;
+    } else if (this.$router.history.current.name == "Contact") {
+      this.contact = true;
     }
   },
 };
@@ -122,11 +154,38 @@ export default {
       font-size: 1rem;
       // border: 1px solid #fff;
     }
+    .resource {
+      position: relative;
+      #res-dropdown {
+        opacity: 0;
+      }
+      .dropdown {
+        transition: all 0.3s linear;
+        position: absolute;
+        background-color: $bgcBlue;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        border-radius: 5px;
+        top: 100%;
+        left: 50%;
+        color: white;
+        filter: drop-shadow(1px 1px 3px rgba(98, 98, 98, 0.685));
+        > div {
+          padding: 0.5em;
+          &:hover {
+            background-color: #fff;
+            color: $darkColor;
+          }
+        }
+      }
+    }
   }
 }
 .selected {
   background-color: #fff;
-  >div{color: $barColor;}
+  > div {
+    color: $barColor;
+  }
   cursor: auto;
 }
 </style>
