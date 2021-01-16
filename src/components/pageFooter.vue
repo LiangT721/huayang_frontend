@@ -137,6 +137,7 @@ export default {};
 .bottom {
   display: grid;
   justify-items: center;
+  padding-bottom: 5px;
   > div {
     font-family: $text;
     color: white;
