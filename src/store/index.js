@@ -11,14 +11,14 @@ export default new Vuex.Store({
                 chi: "值得信赖的财务管家"
             },
             sub_slogen: {
-                eng: "Make the financial part more easier for you and your business journey.",
-                chi: "用我们的专业为您的生意保驾护航"
+                eng: "",
+                chi: ""
             }
         },
         story: {
             title: {
-                eng: "The #1 Small Business Accounting Services Firm",
-                chi: "#NO1 服务"
+                eng: "Make the financial part more easier for you and your business journey.",
+                chi: "用我们的专业为您的生意保驾护航"
             },
             content: {
                 eng: "Our goal: Today's business environment in Canada requires Chartered Professional Accountants to help you cope with tax burdens and financial planning options that are becoming increasingly complex.At Yang Gao. CPA P.C Ltd, we provide bookkeeping, accounting, tax and advisory services to clients in the Saskatchewan and Alberta area. We offer specialized services to accommodate all personal and business accounting needs. Our goal is to help our clients meet regulatory obligations, minimize risks, create clarity and reduce tax burdens.",
