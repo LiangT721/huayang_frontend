@@ -82,7 +82,7 @@ export default {
   .covid {
     width: 70%;
     margin: 2em 0 6em 15%;
-      padding-bottom: 10em;
+    padding-bottom: 10em;
   }
   .content {
     width: 90%;

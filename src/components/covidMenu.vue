@@ -55,6 +55,8 @@ export default {
   margin-left: 10%;
   margin-top: 2em;
   min-height: 45vh;
+  padding-bottom: 20em;
+
 
   .top {
     display: flex;
@@ -82,6 +84,8 @@ export default {
   .menu {
     width: 70%;
     margin: 2em 0 6em 15%;
+    padding-bottom: 10em;
+
     li{
       font-size: 1.2rem;
     }
