@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Service from "../views/Service.vue";
+import ServiceItem from "../views/ServiceItemPage.vue";
 import Resource from "../views/Resource.vue";
 import ResourceCovid from "../views/ResourceCovid.vue"
 import ResourceCovidContent from "../views/ResourceCovidContent.vue";
@@ -24,6 +25,11 @@ const routes = [{
         path: "/service",
         name: "Service",
         component: Service
+    },
+    {
+        path: "/service/*",
+        name: "ServiceItem",
+        component: ServiceItem
     },
     {
         path: "/resource",

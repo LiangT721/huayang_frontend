@@ -1,51 +1,46 @@
 <template>
   <div class="footer">
     <div class="top">
-      <div class="content">
-        <div class="logo" v-if="this.$store.getters.device != 'mobile'">
+      <div class="info">
+        <div class="phone">
+          <div class="icon">
+            <img src="../assets/phone-call.png" alt="" />
+          </div>
+          <a href="tel:13062611887">+1 (306) 261-1887</a>
+        </div>
+        <div class="fax">
+          <div class="icon">
+            <img src="../assets/fax.png" alt="" />
+          </div>
+          <a href="tel:13065009555">+1 (306) 500-9555</a>
+        </div>
+        <div class="email">
+          <div class="icon">
+            <img src="../assets/email.png" alt="" />
+          </div>
+          <a href="mailto:yang.gao@youngsaccounting.ca"
+            >yang.gao@ youngsaccounting.ca</a
+          >
+        </div>
+        <div class="address">
+          <div class="icon">
+            <img src="../assets/home.png" alt="" />
+          </div>
+          <div>124-203 Herold Terrace, Saskatoon, SK, S7V 1H7</div>
+        </div>
+      </div>
+      <div class="top-mid">
+        <div class="logo">
+          <!-- <div class="logo" v-if="this.$store.getters.device == 'mobile'"> -->
           <div class="logo-set">
             <img src="../assets/logo.png" alt="" class="logo" />
             <div class="text">
               <div class="chi">華楊會計師事務所</div>
-              <div class="eng">YANG GAO. CdivA P.C Ltd.</div>
+              <div class="eng">YANG GAO. CPA P.C Ltd.</div>
             </div>
           </div>
         </div>
-        <div class="contact">
-          <div class="part1">
-            <div class="phone">
-              <div v-if="this.$store.getters.lan">
-                Phone: <a href="tel:888888888">(888)888-8888</a>
-              </div>
-              <div v-else>电话: <a href="tel:888888888">(888)888-8888</a></div>
-            </div>
-            <div class="fax">
-              <div v-if="this.$store.getters.lan">
-                Fax: <a href="tel:888888888">(888)888-8888</a>
-              </div>
-              <div v-else>电话: <a href="tel:888888888">(888)888-8888</a></div>
-            </div>
-          </div>
-          <div class="part2">
-            <div class="email">
-              <div v-if="this.$store.getters.lan">
-                Email:
-                <a href="mailto:**********@gamil.com">**********@gamil.com</a>
-              </div>
-              <div v-else>
-                电子邮箱:
-                <a href="tel:**********@gamil.com">**********@gamil.com</a>
-              </div>
-            </div>
-            <div class="address">
-              <div v-if="this.$store.getters.lan">
-                Address: 123 fake street *** Calgary AB
-              </div>
-              <div v-else>地址: 123 fake street *** Calgary AB</div>
-            </div>
-          </div>
-        </div>
-        <div class="time">
+        <div class="time" v-if="this.$store.getters.device == 'mobile'">
           <div v-if="this.$store.getters.lan">
             <div>BUSINESS TIME</div>
             <div>Monday ~ Friday</div>
@@ -57,13 +52,20 @@
             <div>9:00 ~ 17:00</div>
           </div>
         </div>
-      </div>
-      <div class="logo" v-if="this.$store.getters.device == 'mobile'">
-        <div class="logo-set">
-          <img src="../assets/logo.png" alt="" class="logo" />
-          <div class="text">
-            <div class="chi">華楊會計師事務所</div>
-            <div class="eng">YANG GAO. CdivA P.C Ltd.</div>
+        <div class="time" v-else>
+          <div v-if="this.$store.getters.lan">
+            <div>BUSINESS TIME:</div>
+            <div class="right">
+              <div>Monday ~ Friday</div>
+              <div>9:00 ~ 17:00</div>
+            </div>
+          </div>
+          <div v-else>
+            <div>营业时间:</div>
+            <div class="right">
+              <div>周一 ~ 周五</div>
+              <div>9:00 ~ 17:00</div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,7 +90,7 @@ export default {};
   padding-top: 1em;
   z-index: 1;
   width: 100vw;
-  //   height: 8em;
+  height: 22em;
   background-color: $barColor;
 }
 .top {
@@ -101,14 +103,39 @@ export default {};
   a {
     color: white;
   }
-  .content {
+  .info {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    width: 90%;
-    margin-left: 10%;
-    .contact {
-      width: 90%;
+    row-gap: 1rem;
+    > div {
+      width: 100%;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 4fr;
+      .icon {
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: 5px;
+        height: 2.5em;
+        width: 2.5em;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        justify-self: center;
+        > img {
+          height: 1.2rem;
+          justify-self: center;
+        }
+      }
     }
+  }
+  .top-mid {
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
     .time {
       > div {
         display: grid;
@@ -126,7 +153,7 @@ export default {};
   }
   .text {
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     display: grid;
     align-items: center;
   }
@@ -148,20 +175,41 @@ export default {};
   }
 }
 @media only screen and (min-width: 768px) {
+  .footer {
+    height: 10em;
+  }
   .top {
     margin: 0 1em;
     font-size: 0.7rem;
-    height: 5em;
-    .content {
-      grid-template-columns: 1.2fr 2.5fr 1fr;
-      width: 100%;
-      margin-left: 0;
-      align-items: center;
-      .contact {
-        width: 90%;
-        margin-left: 10%;
-        display: grid;
-        grid-template-columns: auto auto;
+    .info {
+      width: 90%;
+      //  margin-left:5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
+      > div {
+        grid-template-columns: 1fr 5fr;
+        column-gap: 1em;
+        .icon {
+          > img {
+            height: 90%;
+            width: 90%;
+          }
+        }
+      }
+    }
+    .top-mid {
+      margin: 0.5em 0;
+      .time{
+        >div{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          justify-items: center;
+          column-gap: 2em;
+          .right{
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -181,21 +229,34 @@ export default {};
 }
 @media only screen and (min-width: 1280px) {
   .footer {
+    height: 11em;
+  }
+  .footer {
     width: 100%;
-    padding-top:5px;
+    padding-top: 5px;
   }
   .top {
-    margin: 1em 15vw;
-    .content {
-      grid-template-columns: 2fr 2.5fr 1fr;
-      .logo-set {
-        margin-left: 5vw;
-      }
-       .contact {
-        width: 90%;
-        margin-left: 10%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    margin: 1em 8vw;
+    .info {
+      width: 90%;
+      //  margin-left:5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
+      > div {
+        grid-template-columns: 1fr 5fr;
+        column-gap: 1em;
+        .icon {
+          height: 2.5em;
+          width: 2.5em;
+          > img {
+            height: 80%;
+            width: 80%;
+          }
+        }
+        > a,
+        > div {
+          font-size: 1rem;
+        }
       }
     }
   }
