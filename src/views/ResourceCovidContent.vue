@@ -22,5 +22,17 @@ import ResourceContent from '../components/resourceContent.vue'
 .res-cov-con{
     position: relative;
     min-height: 100vh;
+    padding-bottom: 25em;
+
+}
+@media only screen and (min-width: 768px) {
+    .res-cov-con{
+        padding-bottom:15em
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .res-cov-con{
+        padding-bottom:13em
+    }
 }
 </style>

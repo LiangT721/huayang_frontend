@@ -7,9 +7,9 @@
     <ul>
       <li @click="cers">Canada Emergency Rent Subsidy (CERS)</li>
       <li @click="bf">Business financing</li>
-      <li @click="ssrgi">
+      <!-- <li @click="ssrgi">
         Support for Students and Recent Graduates Impacted by COVID-19
-      </li>
+      </li> -->
       <li @click="cews">The Canada Emergency Wage Subsidy (CEWS) – 75%</li>
       <li @click="twes">Temporary Wage Subsidy for Employers (TWSE) - 10 %</li>
     </ul>
@@ -55,7 +55,6 @@ export default {
   margin-left: 10%;
   margin-top: 2em;
   min-height: 45vh;
-  padding-bottom: 20em;
 
 
   .top {
@@ -84,7 +83,6 @@ export default {
   .menu {
     width: 70%;
     margin: 2em 0 6em 15%;
-    padding-bottom: 10em;
 
     li{
       font-size: 1.2rem;

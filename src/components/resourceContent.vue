@@ -12,10 +12,10 @@
 export default {
   components: {
     "co-bf": () => import("@/components/content/resCoBF"),
-    "co-cerb": () => import("@/components/content/resCoCERB"),
+    // "co-cerb": () => import("@/components/content/resCoCERB"),
     "co-cers": () => import("@/components/content/resCoCERS"),
     "co-cews": () => import("@/components/content/resCoCEWS"),
-    "co-ssrgi": () => import("@/components/content/resCoSSRGI"),
+    // "co-ssrgi": () => import("@/components/content/resCoSSRGI"),
     "co-twse": () => import("@/components/content/resCoTWSE"),
   },
   data() {
@@ -69,7 +69,7 @@ export default {
   width: 80%;
   margin-left: 10%;
   margin-top: 2em;
-  padding-bottom: 20em;
+  // padding-bottom: 20em;
   min-height: 45vh;
 }
 
@@ -82,7 +82,6 @@ export default {
   .covid {
     width: 70%;
     margin: 2em 0 6em 15%;
-    padding-bottom: 10em;
   }
   .content {
     width: 90%;
