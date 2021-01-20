@@ -1,5 +1,5 @@
 <template>
-  <div>
+    <div>
     <div v-if="this.$store.getters.lan">
       <h1>Business financing</h1>
       <h2>
@@ -104,23 +104,20 @@
       了解更多细节 <br />
       <a href="https://ceba-cuec.ca/"><u>https://ceba-cuec.ca/</u></a>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
-export default {};
+    export default {
+        
+    }
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/style.scss";
+h1{
+    font-family: $title;
+    
+}
 
-.l1 {
-  width: 90%;
-  margin-left: 10%;
-}
-.l2 {
-  margin-top: 0.5em;
-  width: 90%;
-  margin-left: 8%;
-}
 </style>

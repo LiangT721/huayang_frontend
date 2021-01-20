@@ -41,7 +41,7 @@ export default {
     min-height:100vh;
     box-sizing: border-box;
     position:relative;
-    padding-bottom: 20em;
+    padding-bottom: 25em;
     // width: 100%;
     // overflow: hidden;
 }
@@ -64,7 +64,7 @@ export default {
 }
 @media only screen and (min-width: 768px) {
     .service-page{
-        padding-bottom:10em
+        padding-bottom:15em
     }
     .about-service{
         .about-content{
@@ -73,7 +73,9 @@ export default {
     }
 }
 @media only screen and (min-width: 1280px) {
-   
+   .service-page{
+        padding-bottom:15em
+    }
 }
 
 </style>

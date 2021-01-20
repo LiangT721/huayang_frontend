@@ -58,16 +58,16 @@ export default {
   },
   methods: {
     toService1() {
-      this.selectService("tax");
+      this.selectService("project1");
     },
     toService2() {
-      this.selectService("tax2");
+      this.selectService("project2");
     },
     toService3() {
-      this.selectService("tax3");
+      this.selectService("project3");
     },
     toService4() {
-      this.selectService("tax4");
+      this.selectService("project4");
     },
     selectService(data) {
       this.$emit("toggleService", data);
@@ -76,22 +76,22 @@ export default {
   watch: {
     btn(newValue) {
       console.log(newValue);
-      if (this.btn == "tax") {
+      if (this.btn == "project1") {
         this.project1 = "selected";
         this.project2 = "unselected";
         this.project3 = "unselected";
         this.project4 = "unselected";
-      } else if (this.btn == "tax2") {
+      } else if (this.btn == "project2") {
         this.project1 = "unselected";
         this.project2 = "selected";
         this.project3 = "unselected";
         this.project4 = "unselected";
-      } else if (this.btn == "tax3") {
+      } else if (this.btn == "project3") {
         this.project1 = "unselected";
         this.project2 = "unselected";
         this.project3 = "selected";
         this.project4 = "unselected";
-      } else if (this.btn == "tax4") {
+      } else if (this.btn == "project4") {
         this.project1 = "unselected";
         this.project2 = "unselected";
         this.project3 = "unselected";
@@ -101,13 +101,13 @@ export default {
   },
   mounted() {
     let path = this.$router.history.current.path.replace("/service/", "");
-    if (path == "tax") {
+    if (path == "project1") {
       this.project1 = "selected";
-    } else if (path == "tax2") {
+    } else if (path == "project2") {
       this.project2 = "selected";
-    } else if (path == "tax3") {
+    } else if (path == "project3") {
       this.project3 = "selected";
-    } else if (path == "tax4") {
+    } else if (path == "project4") {
       this.project4 = "selected";
     }
   },
@@ -161,7 +161,7 @@ export default {
 }
 @media only screen and (min-width: 1280px) {
   .service-menu {
-    top: 10em;
+    top: 15em;
     left: 0;
     width: 15vw;
   }

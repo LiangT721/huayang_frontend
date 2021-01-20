@@ -99,16 +99,16 @@
 export default {
     methods: {
         toServicePage1() {
-            this.$router.push('/service/tax')
+            this.$router.push('/service/project1')
         },
         toServicePage2() {
-            this.$router.push('/service/tax2')
+            this.$router.push('/service/project2')
         },
         toServicePage3() {
-            this.$router.push('/service/tax3')
+            this.$router.push('/service/project3')
         },
         toServicePage4() {
-            this.$router.push('/service/tax4')
+            this.$router.push('/service/project4')
         }
     },
 };

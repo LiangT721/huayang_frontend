@@ -167,7 +167,7 @@ export default {
         grid-template-rows: 1fr 1fr;
         border-radius: 5px;
         top: 100%;
-        left: 50%;
+        // left: 50%;
         color: white;
         filter: drop-shadow(1px 1px 3px rgba(98, 98, 98, 0.685));
         > div {

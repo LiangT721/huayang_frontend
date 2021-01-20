@@ -1,9 +1,8 @@
 <template>
   <div class="service-items-page">
     <page-header />
-    <!-- <service-content /> -->
-    <component :is="service" class="content"/>
-    <service-menu @toggleService="toggleService" :btn="service"/>
+    <service-content :service="projectDisplay"/>
+    <service-menu @toggleService="toggleService" :btn="projectDisplay"/>
     <page-footer />
   </div>
 </template>
@@ -15,12 +14,15 @@ import ServiceContent from "../components/service/serviceContent.vue";
 import ServiceMenu from "../components/service/serviceMenu.vue";
 export default {
     data() {
-        return {
-            service: ""
-        }
+      return {
+        projectDisplay: ""
+      }
     },
     props: {
         btn: {
+            type: String,
+        },
+        service: {
             type: String,
         },
     },
@@ -29,35 +31,36 @@ export default {
     PageFooter,
     ServiceContent,
     ServiceMenu,
-    "tax" :() => import("@/components/service/serviceContent"),
-    "tax2" :() => import("@/components/service/serviceContent2")
   },
   methods: {
       toggleService(data) {
-          this.service = data
+          this.projectDisplay = data
       }
   },
-   mounted () {
-      let path = this.$router.history.current.path.replace('/service/', '');
-      console.log(path);
-        this.service = path;
-  },
+
 };
 </script>
 
 <style lang="scss" scoped>
 .service-items-page {
   min-height: 100vh;
-  padding-bottom: 10em;
+  padding-bottom: 25em;
   position: relative;
 }
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+      .service-items-page{
+      padding-bottom: 25em;
+    }
+}
 @media only screen and (min-width: 1280px) {
     .content{
         width: 50vw;
         margin-left:30vw;
         // background-color: red;
         // padding-bottom: 25em;
+    }
+    .service-items-page{
+      padding-bottom: 15em;
     }
 }
 </style>
