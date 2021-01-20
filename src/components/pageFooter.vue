@@ -90,7 +90,7 @@ export default {};
   padding-top: 1em;
   z-index: 1;
   width: 100vw;
-  height: 22em;
+  // height: 22em;
   background-color: $barColor;
 }
 .top {
@@ -166,12 +166,14 @@ export default {};
 .bottom {
   display: grid;
   justify-items: center;
+  align-items: center;
   padding-bottom: 5px;
+  height: 1rem;
   > div {
     font-family: $text;
     color: white;
     font-size: 0.6rem;
-    padding: 2px 0;
+    // padding: 2px 0;
   }
 }
 @media only screen and (min-width: 768px) {
