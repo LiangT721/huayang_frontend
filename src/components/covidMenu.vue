@@ -12,6 +12,7 @@
       </li> -->
       <li @click="cews">The Canada Emergency Wage Subsidy (CEWS) – 75%</li>
       <li @click="twes">Temporary Wage Subsidy for Employers (TWSE) - 10 %</li>
+      <li @click="crb">The Canada Recovery Benefit (CRB)</li>
     </ul>
   </div>
 </template>
@@ -41,6 +42,10 @@ export default {
     },
     twes() {
       this.$router.push("/resource/covid19/twes");
+      location.reload();
+    },
+    crb() {
+      this.$router.push("/resource/covid19/crb");
       location.reload();
     },
   },
