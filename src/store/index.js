@@ -21,8 +21,8 @@ export default new Vuex.Store({
                 chi: "用我们的专业为您的生意保驾护航"
             },
             content: {
-                eng: "Our goal: Today's business environment in Canada requires Chartered Professional Accountants to help you cope with tax burdens and financial planning options that are becoming increasingly complex.At Yang Gao. CPA P.C Ltd, we provide bookkeeping, accounting, tax and advisory services to clients in the Saskatchewan and Alberta area. We offer specialized services to accommodate all personal and business accounting needs. Our goal is to help our clients meet regulatory obligations, minimize risks, create clarity and reduce tax burdens.",
-                chi: "Our goal: 在今天的加拿大商业环境中，需要注册会计师协助您和您的生意应对日益复杂的税务要求和整体的财务计划。在华杨会计师事务所，我们将为萨斯喀彻温和阿尔伯塔的客户提供记账、审计、财务、税务服务，移民解除条件服务以及财税相关的咨询服务。我们将会为您量身定制专属的个人和商业会计服务计划。我们的目标是帮助我们的客户在合规的范围内最大限度的降低风险，合理的减少税务负担。"
+                eng: "Today's business environment in Canada requires Chartered Professional Accountants to help you cope with tax burdens and financial planning options that are becoming increasingly complex.At Yang Gao. CPA P.C Ltd, we provide bookkeeping, accounting, tax and advisory services to clients in the Saskatchewan and Alberta area. We offer specialized services to accommodate all personal and business accounting needs. Our goal is to help our clients meet regulatory obligations, minimize risks, create clarity and reduce tax burdens.",
+                chi: "在今天的加拿大商业环境中，需要注册会计师协助您和您的生意应对日益复杂的税务要求和整体的财务计划。在华杨会计师事务所，我们将为萨斯喀彻温和阿尔伯塔的客户提供记账、审计、财务、税务服务，移民解除条件服务以及财税相关的咨询服务。我们将会为您量身定制专属的个人和商业会计服务计划。我们的目标是帮助我们的客户在合规的范围内最大限度的降低风险，合理的减少税务负担。"
             }
         },
         homepage_description: {

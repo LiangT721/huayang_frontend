@@ -16,7 +16,7 @@ export default {
     "co-cers": () => import("@/components/content/resCoCERS"),
     "co-cews": () => import("@/components/content/resCoCEWS"),
     // "co-ssrgi": () => import("@/components/content/resCoSSRGI"),
-    "co-twse": () => import("@/components/content/resCoTWSE"),
+    // "co-twse": () => import("@/components/content/resCoTWSE"),
     "co-crb":()=>import("@/components/content/resCoCRB"),
   },
   data() {
@@ -43,8 +43,8 @@ export default {
       //     this.current = "co-bf"
     } else if (path == "covid19/cews") {
       this.current = "co-cews";
-    } else if (path == "covid19/twes") {
-      this.current = "co-twse";
+    // } else if (path == "covid19/twes") {
+    //   this.current = "co-twse";
     } else if (path == "covid19/crb") {
       this.current = "co-crb";
     }

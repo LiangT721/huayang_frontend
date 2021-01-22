@@ -22,7 +22,7 @@
             <div v-if="this.$store.getters.lan">Phone:</div>
             <div v-else>电话:</div>
           </div>
-          <div class="detail"><a href="tel:3008001186">(300)-800-1186</a></div>
+          <div class="detail"><a href="tel:3008001186">(306)-800-1186</a></div>
           <div class="spliter"></div>
         </div>
         <div class="contact short">
@@ -30,7 +30,7 @@
             <div v-if="this.$store.getters.lan">Direct line：</div>
             <div v-else>电话：</div>
           </div>
-          <div class="detail"><a href="tel:13062611887">+1 (306) 261-1887</a></div>
+          <div class="detail"><a href="tel:13062611887">(306) 261-1887</a></div>
           <div class="spliter"></div>
         </div>
         <div class="contact">
@@ -38,7 +38,7 @@
             <div v-if="this.$store.getters.lan">Fax:</div>
             <div v-else>传真:</div>
           </div>
-          <div class="detail"><a href="tel:13065009555">+1 (306) 500-9555</a></div>
+          <div class="detail"><a href="tel:13065009555">(306) 500-9555</a></div>
           <div class="spliter"></div>
         </div>
         <div class="contact">

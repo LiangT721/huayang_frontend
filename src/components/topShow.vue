@@ -1,6 +1,6 @@
 <template>
   <div class="top-show">
-    <div class="phone">Phone: <a href="tel:888888888">(888)888-8888</a></div>
+    <div class="phone">Phone: <a href="tel:3062611887">(306) 261-1887</a></div>
     <div class="language-set">
       <div class="btn">
         <div
@@ -114,6 +114,30 @@ a {
   .language-set {
     font-size: 0.6rem;
     margin-right: 1em;
+    .btn {
+      border: none;
+
+      > div {
+        padding: 0 1em;
+      }
+      .eng {
+        border-radius: 3px 0 0 3px;
+      }
+      .chi {
+        transition: all 0.2s ease-in-out;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+  .selected {
+    background-color: #ffff;
+    color: $darkColor;
+  }
+  .unselected {
+    box-sizing: border-box;
+    border: 1px solid #8b8b8b;
+    background-color: $darkColor;
+    color: #ffff;
   }
 }
 @media only screen and (min-width: 1280px) {

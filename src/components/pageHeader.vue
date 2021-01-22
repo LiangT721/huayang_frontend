@@ -6,7 +6,7 @@
         <img src="../assets/logo.png" alt="" class="logo" />
         <div class="text">
           <div class="chi">華楊會計師事務所</div>
-          <div class="eng">YANG GAO. CdivA P.C Ltd.</div>
+          <div class="eng">YANG GAO. CPA P.C Ltd.</div>
         </div>
       </div>
       <menu-bar v-if="this.$store.getters.device != 'mobile'" />
