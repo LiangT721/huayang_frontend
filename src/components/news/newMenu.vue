@@ -8,7 +8,7 @@
     </nav>
     <div class="menu-list col-11 py-md-3">
       <ul>
-        <li class="list-item">
+        <li class="list-item" @click="taxRelateGift">
             <div v-if="this.$store.getters.lan">
                 Tax issues related to gifts to children and others
             </div>
@@ -16,7 +16,7 @@
                 关于赠与子女和其他人的相关税务问题
             </div>
         </li>
-        <li class="list-item">Dapibus ac facilisis in</li>
+        <li class="list-item" @click="AlterEgoTrust">Dapibus ac facilisis in</li>
         <li class="list-item">Morbi leo risus</li>
         <li class="list-item">Porta ac consectetur ac</li>
         <li class="list-item">Vestibulum at eros</li>
@@ -31,7 +31,16 @@ import { BootstrapVue } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 Vue.use(BootstrapVue);
-export default {};
+export default {
+  methods: {
+    taxRelateGift() {
+      this.$router.push("/resource/news/taxRelateGift");
+    },
+    AlterEgoTrust() {
+      this.$router.push("/resource/news/AlterEgoTrust");
+    }
+  },
+};
 </script>
 
 <style lang="scss" scoped>

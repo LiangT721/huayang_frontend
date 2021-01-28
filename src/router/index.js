@@ -8,7 +8,7 @@ import Resource from "../views/Resource.vue";
 import ResourceCovid from "../views/ResourceCovid.vue"
 import ResourceCovidContent from "../views/ResourceCovidContent.vue";
 import ResourceNews from "../views/ResourceNews.vue"
-// import ResourceNewsContent from "../views/ResourceNewsContent.vue";
+import ResourceNewsContent from "../views/ResourceNewsContent.vue";
 import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
@@ -47,6 +47,11 @@ const routes = [{
         path: "/resource/news",
         name: "ResourceNews",
         component: ResourceNews
+    },
+    {
+        path: "/resource/news/*",
+        name: "ResourceNewsContent",
+        component: ResourceNewsContent
     },
     {
         path: "/resource/covid19/*",
