@@ -29,14 +29,14 @@
           {{ this.$store.state.service_project.project3.title.chi }}
         </div>
       </div>
-      <div class="service-selection" :class="project4" @click="toService4">
+      <!-- <div class="service-selection" :class="project4" @click="toService4">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.service_project.project4.title.eng }}
         </div>
         <div v-else>
           {{ this.$store.state.service_project.project4.title.chi }}
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

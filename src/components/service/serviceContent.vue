@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="service-content">
     <component :is="projectDisplay" class="content" />
   </div>
 </template>
@@ -39,17 +39,11 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/style.scss";
 
- .content{
-   width: 70%;
-   margin-left:15%;
-  margin-top:5em;
-  margin-bottom:5em;
- }
 @media only screen and (min-width: 768px) {
 }
 @media only screen and (min-width: 1280px) {
  .content{
-   width: 50vw;
- margin-left: 35vw;}
+   width: 70vw;
+ margin-left: 25vw;}
 }
 </style>

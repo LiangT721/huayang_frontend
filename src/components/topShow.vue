@@ -23,6 +23,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.use(BootstrapVue)
 import "ant-design-vue/lib/date-picker/style/css";
 export default {
   data() {
@@ -47,6 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @import "../assets/style.scss";
 
 .top-show {
@@ -73,8 +79,8 @@ a {
   justify-self: right;
   .btn {
     display: grid;
-    grid-template-columns: auto auto;
-    border: 1px solid #d1d1d1;
+    grid-template-columns: 1fr 1fr;
+    // border: 1px solid #d1d1d1;
     border-radius: 2px;
     > div {
       padding: 0 0.2em;
@@ -99,8 +105,8 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .top-show {
-    grid-template-columns: 5fr 1fr;
-    padding: 0 5em;
+    grid-template-columns: 3fr auto;
+    padding: 0 4em;
     align-items: center;
     height: 3em;
     justify-items: right;
@@ -110,13 +116,15 @@ a {
     font-size: 1rem;
     color: #ffff;
     text-shadow: 1px 1px 1px rgb(112, 112, 112);
+    
   }
   .language-set {
     font-size: 0.6rem;
     margin-right: 1em;
+    filter: drop-shadow(1px 1px 0px 6px rgb(182, 182, 182));
+
     .btn {
       border: none;
-
       > div {
         padding: 0 1em;
       }
@@ -131,7 +139,10 @@ a {
   }
   .selected {
     background-color: #ffff;
+    position: relative;
+    top: -1px;
     color: $darkColor;
+
   }
   .unselected {
     box-sizing: border-box;

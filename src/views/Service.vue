@@ -26,6 +26,7 @@
 </template>
 
 <script>
+
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 import ServiceItem from '../components/service/serviceItem.vue';

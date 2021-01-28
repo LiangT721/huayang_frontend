@@ -11,6 +11,12 @@
              title: "COVID-19"
          }
      },  
+     mounted () {
+         const path = this.$router.history.current.fullPath
+         if (path.includes("news")){
+             this.title = "news"
+         }
+     },
     }
 </script>
 

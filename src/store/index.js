@@ -66,34 +66,34 @@ export default new Vuex.Store({
         service_project: {
             project1: {
                 title: {
-                    eng: "Personal Tax Returns",
-                    chi: "个人报税"
+                    eng: "Personal tax services",
+                    chi: "个人业务"
                 },
                 description: {
-                    eng: "As a business owner, you file your personal income tax return and pay the same amount of tax as any employed wage earner. Your business income, after deductions, is considered your annual wage, you report it as professional or business income.",
-                    chi: "作为自雇人士，你需要使用正确的会计方法来报告您的企业所得税。非税务居民，指的是完全切断与加拿大的居住关系，而且上个税务年度完全没有住在加拿大或者呆在加拿大的时间少于183天的特殊居民。"
+                    eng: "International student tax return, personal/family tax return, overseas asset declaration, self-employment tax return, non-tax resident tax return.",
+                    chi: "留学生纳税申报，个人/家庭纳税申报，海外资产申报，自雇纳税申报，非税务居民纳税申报。"
                 }
 
             },
             project2: {
                 title: {
-                    eng: "Corporate Tax Returns",
-                    chi: "个人报税"
+                    eng: "Enterprise services",
+                    chi: "企业业务"
                 },
                 description: {
-                    eng: "As a business owner, you file your personal income tax return and pay the same amount of tax as any employed wage earner. Your business income, after deductions, is considered your annual wage, you report it as professional or business income.",
-                    chi: "作为自雇人士，你需要使用正确的会计方法来报告您的企业所得税。非税务居民，指的是完全切断与加拿大的居住关系，而且上个税务年度完全没有住在加拿大或者呆在加拿大的时间少于183天的特殊居民。"
+                    eng: "Company registration, application for GST number, provincial taxation, statements, annual audit, financial system establishment and bookkeeping, payroll, taxation, consulting, financial partners",
+                    chi: "成立公司，申请GST号，省税，报表，年度审计，财务系统建立及记账，工资核算，税务，咨询，财务合作伙伴。"
                 }
 
             },
             project3: {
                 title: {
-                    eng: "Overseas Assets Reporting",
-                    chi: "个人报税"
+                    eng: "Help immigrant entrepreneurs from SINP Entrepreneur Category",
+                    chi: "移民解除条件"
                 },
                 description: {
-                    eng: "As a business owner, you file your personal income tax return and pay the same amount of tax as any employed wage earner. Your business income, after deductions, is considered your annual wage, you report it as professional or business income.",
-                    chi: "作为自雇人士，你需要使用正确的会计方法来报告您的企业所得税。非税务居民，指的是完全切断与加拿大的居住关系，而且上个税务年度完全没有住在加拿大或者呆在加拿大的时间少于183天的特殊居民。"
+                    eng: "When new immigrant entrepreneurs first come to Saskatoon, they need to adapt to the new environment, and start a new business. They often feel confused and don't know where to start. We have provided a full range of services for hundreds of new Chinese immigrant entrepreneurs. From the initial business plan to the company registration, to the final business implementation and operation, we will use professional knowledge to escort you at every step and let you complete it smoothly: start a business and continue to operate. At the same time, we have also accumulated a wealth of business resources in the local area. We can not only match you with other entrepreneurs, but also recommend professionals in other fields to help you and your business operate smoothly in the local area. We can be the strong partner for you to meet the criteria of SINP Entrepreneur program.",
+                    chi: "新移民初登萨斯卡通，适应新的环境，开启新的生意，常常会感到好无头绪，不知道从何开始。我们已经为数百个华人新移民企业家提供全方位的服务，从最初的商业计划到公司成立，再到最终的商业落实经营，每一步我们都将用专业知识为您护航，让您顺利完成创业，并且持续经营。同时，我们在当地也已积累了丰富的商业资源，既能够为您与其他企业家牵线搭桥，也能够为您推荐其他领域的专业人士帮助您和您的生意在当地顺利经营，为解除移民条件提供强有力的保障。"
                 }
 
             },
