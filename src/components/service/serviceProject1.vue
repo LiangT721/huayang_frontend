@@ -1,6 +1,6 @@
 <template>
   <div class="project container py-5">
-      <h2 class="title text-center py-3 fs-1 text-uppercase">
+      <h2 class="title text-center py-3 fs-1 text-uppercase ">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.service_project.project1.title.eng }}
         </div>
@@ -12,9 +12,9 @@
         <img
           src="../../assets/service1.jpg"
           alt=""
-          class="img py-3 col-10 offset-1 col-xl-4 order-2"
+          class="img py-3 col-10 col-md-6 mx-auto offset-1 col-xl-4 order-xl-2"
         />
-        <div class="service-content fs-4 py-3 mb-5 col-10 offset-1 col-lg-8 col-xl-6 order-1">
+        <div class="service-content fs-4 py-3 mb-5 col-10 offset-1 col-lg-8 col-xl-6 order-xl-1">
           <div v-if="this.$store.getters.lan">
             {{ this.$store.state.service_project.project1.description.eng }}
           </div>
@@ -44,11 +44,19 @@ export default {};
 h2 {
   font-family: $title;
 }
+.img{
+    height: 15em;
+    object-fit: cover;
+  }
 
+@media only screen and (min-width: 768px) {
+  .img{
+    height: 20em;
+  }
+}
 @media only screen and (min-width: 1280px) {
   .img{
     height: 20em;
-    object-fit: cover;
   }
 }
 </style>

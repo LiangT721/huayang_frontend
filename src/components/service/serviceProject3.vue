@@ -12,7 +12,7 @@
         <img
           src="../../assets/service3.jpg"
           alt=""
-          class="img py-3 mt-xl-5 col-10 offset-1 col-xl-4 order-2"
+          class="img py-3 col-10 col-md-6 mx-auto offset-1 col-xl-4 order-xl-2"
         />
         <div class="service-content fs-4 py-3 mb-5 col-10 offset-1 col-lg-8 col-xl-6 order-1">
           <div v-if="this.$store.getters.lan">
@@ -41,7 +41,16 @@
 h2 {
   font-family: $title;
 }
+.img{
+    height: 15em;
+    object-fit: cover;
+  }
 
+@media only screen and (min-width: 768px) {
+  .img{
+    height: 20em;
+  }
+}
 @media only screen and (min-width: 1280px) {
   .img{
     height: 20em;
