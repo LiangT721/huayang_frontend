@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="time" v-if="this.$store.getters.device == 'mobile'">
+        <div class="time" >
           <div v-if="this.$store.getters.lan">
             <div>BUSINESS TIME</div>
             <div>Monday ~ Friday</div>
@@ -52,7 +52,7 @@
             <div>9:00 ~ 17:00</div>
           </div>
         </div>
-        <div class="time" v-else>
+        <!-- <div class="time" v-else>
           <div v-if="this.$store.getters.lan">
             <div>BUSINESS TIME:</div>
             <div class="right">
@@ -67,7 +67,7 @@
               <div>9:00 ~ 17:00</div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="spliter"></div>
@@ -204,7 +204,7 @@ export default {};
       .time{
         >div{
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           align-items: center;
           justify-items: center;
           column-gap: 2em;

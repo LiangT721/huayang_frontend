@@ -2,7 +2,7 @@
   <div class="service-items container-lg py-5">
     <!-- sdsdsds -->
     <div class="row">
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-lg-3 offset-lg-1" @click="toServicePage1">
+      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage1">
         <img  src="../../assets/service1.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -27,7 +27,7 @@
           >
         </div>
       </div>
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-lg-3 offset-lg-1" @click="toServicePage2">
+      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage2">
         <img src="../../assets/service2.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -52,7 +52,7 @@
           >
         </div>
       </div>
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-lg-3 offset-lg-1" @click="toServicePage3">
+      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage3">
         <img src="../../assets/service3.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -131,7 +131,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/style.scss";
   .service-image {
-    height: 60vw;
+    height: 18em;
     object-fit: cover;
   }
   .service-title {
@@ -154,7 +154,7 @@ export default {
   }
 @media only screen and (min-width: 768px) {
     .service-image {
-      height: 40vw;
+      height: 25em;
     }
 }
 @media only screen and (min-width: 1280px) {

@@ -22,9 +22,8 @@
       <div v-if="this.$store.getters.lan">RESOURCE</div>
       <div v-else>资源</div>
       <div
-        class="dropdown"
+        class="dropdown pc"
         id="res-dropdown"
-        v-if="this.$store.getters.device == 'pc'"
       >
         <div class="news" @click="FinanceTaxation">
           <div v-if="this.$store.getters.lan">Finance & Taxation</div>
@@ -105,7 +104,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-
+.pc{
+  display: none;
+}
 .menu-bar {
   display: grid;
   box-sizing: border-box;
@@ -151,6 +152,9 @@ export default {
   }
 }
 @media only screen and (min-width: 1280px) {
+  .pc{
+    display: block;
+  }
   .menu-bar {
     width: 90%;
     > div {

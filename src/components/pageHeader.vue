@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <top-show v-if="this.$store.getters.device != 'pc'" />
+    <top-show class="pad" />
     <div class="header-bar">
       <div class="logo-set">
         <img src="../assets/logo.png" alt="" class="logo" />
@@ -17,7 +17,7 @@
       >
         <img src="../assets/menu.png" alt="" />
       </div>
-      <top-show v-if="this.$store.getters.device == 'pc'" />
+      <top-show class="pc" />
     </div>
     <transition>
       <menu-bar v-if="this.menu_show" />
@@ -48,7 +48,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-
+.pc {
+  display: none;
+}
 .header {
   position: relative;
   z-index: 1;
@@ -109,6 +111,12 @@ export default {
   }
 }
 @media only screen and (min-width: 1280px) {
+  .pc {
+    display: block;
+  }
+  .pad {
+    display: none;
+  }
   .header {
     height: 6em;
     width: 100%;
