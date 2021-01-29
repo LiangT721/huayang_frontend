@@ -1,8 +1,8 @@
 <template>
   <div class="service-items container-lg py-5">
     <!-- sdsdsds -->
-    <div class="row">
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage1">
+    <div class="container d-xl-flex  justify-content-xl-between">
+      <div class="service-item mx-auto pb-5" @click="toServicePage1">
         <img  src="../../assets/service1.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -27,7 +27,7 @@
           >
         </div>
       </div>
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage2">
+      <div class="service-item mx-auto pb-5" @click="toServicePage2">
         <img src="../../assets/service2.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -52,7 +52,7 @@
           >
         </div>
       </div>
-      <div class="service-item col-10 offset-1 col-md-8 offset-md-2 py-5 col-xl-3 offset-xl-1" @click="toServicePage3">
+      <div class="service-item mx-auto pb-5" @click="toServicePage3">
         <img src="../../assets/service3.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -153,14 +153,25 @@ export default {
     cursor: pointer;
   }
 @media only screen and (min-width: 768px) {
+    .service-item {
+      width: 60vw;
+    }
     .service-image {
-      height: 25em;
+      height: 40vw;
     }
 }
-@media only screen and (min-width: 1280px) {
-    .service-image {
-      height: 20em;
+@media only screen and (min-width: 1200px) {
+    .service-item {
+      width: clamp(300px, 22vw ,350px);
     }
+    .service-image {
+      height: 15vw;
+    }
+    .service-title {
+    font-family: $title;
+    font-size: 1.2rem;
+    height: 5rem;
+  }
 }
 
 </style>

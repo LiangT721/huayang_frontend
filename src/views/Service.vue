@@ -1,8 +1,8 @@
 <template>
   <div class="service-page" >
     <page-header />
-    <div class="about-service">
-      <h1 class="about-title">
+    <div class="about-service pb-md-5">
+      <h1 class="about-title container-sm text-center py-5">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.servicepage_about.title.eng }}
         </div>
@@ -10,7 +10,7 @@
 
         </div>
       </h1>
-      <div class="about-content">
+      <div class="about-content container-sm fs-5 text-center text-md-start">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.servicepage_about.content.eng }}
         </div>
@@ -47,30 +47,30 @@ export default {
     // overflow: hidden;
 }
 .about-service{
-    width:70%;
-    margin-top:4em;
-    margin-left:15%;
-    .about-title{
-        font-family: $title;
-        font-size:2rem;
-        text-align: center;
-        color:$fontBlue
-    }
-    .about-content{
-        font-family: $text;
-        font-size:1rem;
-        text-align: center;
-        line-height: 2em;
-    }
+    // width:70%;
+    // margin-top:4em;
+    // margin-left:15%;
+    // .about-title{
+    //     font-family: $title;
+    //     font-size:2rem;
+    //     text-align: center;
+    //     color:$fontBlue
+    // }
+    // .about-content{
+    //     font-family: $text;
+    //     font-size:1rem;
+    //     text-align: center;
+    //     line-height: 2em;
+    // }
 }
 @media only screen and (min-width: 768px) {
     .service-page{
         padding-bottom:15em
     }
     .about-service{
-        .about-content{
-            text-align: left;
-        }
+        // .about-content{
+        //     text-align: left;
+        // }
     }
 }
 @media only screen and (min-width: 1280px) {
