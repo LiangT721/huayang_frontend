@@ -4,8 +4,8 @@
     <div class="container-sm py-5">
       <h1 class="title text-center text-uppercase py-3 ">About Us</h1>
       <div v-if="this.$store.getters.lan" class="container">
-        <p class="fs-4">Staffed by experienced accountants and tax experts, Yang Gao. CPA P.C Ltd has provided service in Saskatoon and Alberta for years, we have helped every client to achieve its own goal by developing its own unique strategy and have established long-term partnership with many customers. We currently serve clients in a variety of industries including real estate development, investment holding, import and export trade, e-commerce, manufacturing and distribution wholesale, tourism, hotel and catering, software engineering, retail and other fields.</p>
-        <p class="fs-4">Blending professional knowledge and customer service into a premium package, we've helped individuals and local companies with everything from simple tax return, tax planning to asset management. Our professionals rely on in-depth industry-specific experience to tailor our advice accordingly.</p>
+        <p class="fs-5">Staffed by experienced accountants and tax experts, Yang Gao. CPA P.C Ltd has provided service in Saskatoon and Alberta for years, we have helped every client to achieve its own goal by developing its own unique strategy and have established long-term partnership with many customers. We currently serve clients in a variety of industries including real estate development, investment holding, import and export trade, e-commerce, manufacturing and distribution wholesale, tourism, hotel and catering, software engineering, retail and other fields.</p>
+        <p class="fs-5">Blending professional knowledge and customer service into a premium package, we've helped individuals and local companies with everything from simple tax return, tax planning to asset management. Our professionals rely on in-depth industry-specific experience to tailor our advice accordingly.</p>
       </div>
       <div v-else>
         <h2 class="text-center py-3">用我们的专业, 助力您的成功 !</h2>
@@ -20,7 +20,8 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import cookies from "vue-cookies";
+import Vue from 'vue';
 import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -29,7 +30,11 @@ import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 export default {
   components: { pageHeader, PageFooter },
-};
+  mounted () {
+    const lan = cookies.get("lan")
+    this.$store.commit("language_toggle", lan);;
+  },
+}
 </script>
 
 <style lang="scss" scoped>

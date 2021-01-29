@@ -26,13 +26,13 @@
         id="res-dropdown"
         v-if="this.$store.getters.device == 'pc'"
       >
-        <div class="news">
-          <div v-if="this.$store.getters.lan">NEWS</div>
-          <div v-else>新闻</div>
+        <div class="news" @click="FinanceTaxation">
+          <div v-if="this.$store.getters.lan">Finance & Taxation</div>
+          <div v-else>财税知识</div>
         </div>
         <div class="covid" @click="covidPage">
-          <div v-if="this.$store.getters.lan">COVID-19</div>
-          <div v-else>有关新冠</div>
+          <div v-if="this.$store.getters.lan">COVID-19 <br>Benefits </div>
+          <div v-else>COVID-19 <br> 福利政策</div>
         </div>
       </div>
     </div>
@@ -74,6 +74,9 @@ export default {
     covidPage() {
       this.$router.push("/resource/covid19");
     },
+    FinanceTaxation(){
+       this.$router.push("/resource/Finance&Taxation")
+    },
     resourceMenuShow() {
       const resource = document.getElementById("res-dropdown");
       resource.style.opacity = "1";
@@ -84,7 +87,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$router.history.current.name);
+
     if (this.$router.history.current.name == "Home") {
       this.home = true;
     } else if (this.$router.history.current.name == "About") {
@@ -142,6 +145,7 @@ export default {
       &:hover {
         background-color: #fff;
         color: $barColor;
+        border-radius: 5px;
       }
     }
   }
@@ -175,6 +179,7 @@ export default {
           &:hover {
             background-color: #fff;
             color: $darkColor;
+            border-radius: 5px;
           }
         }
       }

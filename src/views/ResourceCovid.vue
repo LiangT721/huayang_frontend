@@ -2,26 +2,28 @@
     <div class="res-cov">
         <page-header />
         <resource-bar />
+        <bread-crumb />
         <covid-menu />
         <page-footer />
     </div>
 </template>
 
 <script>
+import BreadCrumb from '../components/BreadCrumb.vue'
 import CovidMenu from '../components/covidMenu.vue'
 import PageFooter from '../components/pageFooter.vue'
 import pageHeader from '../components/pageHeader.vue'
 import ResourceBar from '../components/resourceBar.vue'
     export default {
-  components: { pageHeader, ResourceBar, CovidMenu, PageFooter },
+  components: { pageHeader, ResourceBar, CovidMenu, PageFooter, BreadCrumb },
         
     }
 </script>
 
 <style lang="scss" scoped>
 .res-cov{
-    position: relative;
-    // min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
   padding-bottom: 25em;
 
 }

@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import cookies from "vue-cookies";
 
 Vue.use(Vuex);
 
@@ -109,7 +110,7 @@ export default new Vuex.Store({
 
             },
         },
-        language: true,
+        language: true
 
     },
     mutations: {
@@ -121,7 +122,12 @@ export default new Vuex.Store({
     modules: {},
     getters: {
         lan: state => {
-            return state.language;
+            if (cookies.get("lan")) {
+                const isTrueSet = (cookies.get('lan').toLowerCase() === 'true');
+                return isTrueSet
+            } else {
+                return state.language;
+            }
         },
         device: () => {
             if (window.innerWidth < 768) {

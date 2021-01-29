@@ -2,6 +2,7 @@
   <div class="newspage">
     <page-header />
     <resource-bar />
+    <bread-crumb  />
     <component :is="current" class="content" />
     <page-footer />
   </div>
@@ -15,14 +16,18 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import pageFooter from '../components/pageFooter.vue';
 import PageHeader from '../components/pageHeader.vue';
 import ResourceBar from '../components/resourceBar.vue';
+import BreadCrumb from '../components/BreadCrumb.vue';
 Vue.use(BootstrapVue);
 export default {
   components: { 
       pageFooter,
       PageHeader,
       ResourceBar,   
-      "taxRelateGift": () => import("@/components/news/TaxRelateGift.vue"),
-      "AlterEgoTrust": () => import("@/components/news/AlterEgoTrust.vue")
+      "taxRelateGift": () => import("@/components/Finance&Taxation/TaxRelateGift.vue"),
+      "AlterEgoTrust": () => import("@/components/Finance&Taxation/AlterEgoTrust.vue"),
+      "TaxReturnInfo": () => import("@/components/Finance&Taxation/TaxReturnInfo.vue"),
+      "HoldingCompany": () => import("@/components/Finance&Taxation/HoldingCompany.vue"),
+    BreadCrumb,
     },
     data() {
       return {
@@ -36,6 +41,12 @@ export default {
       this.current = "taxRelateGift";}
     else if (path == "news/AlterEgoTrust") {
       this.current = "AlterEgoTrust";
+    }
+    else if (path == "news/TaxReturnInfo") {
+      this.current = "TaxReturnInfo";
+    }
+    else if (path == "news/HoldingCompany") {
+      this.current = "HoldingCompany";
     }
   }
 };

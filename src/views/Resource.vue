@@ -2,12 +2,14 @@
   <div class="resource">
     <page-header />
     <resource-bar />
+    <bread-crumb />
     <resource-menu />
     <page-footer />
   </div>
 </template>
 
 <script>
+import BreadCrumb from '../components/BreadCrumb.vue';
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 import ResourceBar from "../components/resourceBar.vue";
@@ -18,6 +20,7 @@ export default {
     PageFooter,
     ResourceBar,
     ResourceMenu,
+    BreadCrumb,
   },
 };
 </script>

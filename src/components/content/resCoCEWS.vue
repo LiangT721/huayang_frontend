@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container-sm">
     <div v-if="this.$store.getters.lan">
-      <h1>The Canada Emergency Wage Subsidy (CEWS) – 75%</h1>
-      <p>
+      <h1 class="text-center col-8 offset-2 py-5">The Canada Emergency Wage Subsidy (CEWS) – 75%</h1>
+      <p class="col-10 offset-1">
         The new Canada Emergency Wage Subsidy (CEWS) provides a 75% wage subsidy
         to eligible employers for up to 24 weeks, retroactive to March 15, 2020.
         <br />
@@ -23,7 +23,7 @@
         percentage for calculating their 10% temporary wage subsidy and
         requesting the maximum CEWS.
       </p>
-      <h2>Eligibility</h2>
+      <h2 class="col-10 offset-1">Eligibility</h2>
       <ul class="l1">
         <li>
           Eligibility for the CEWS of an employee's remuneration is available to
@@ -43,7 +43,7 @@
           and 30% for the following months (see Eligible Periods).
         </li>
       </ul>
-      <h2>Amount of Subsidy</h2>
+      <h2 class="col-10 offset-1">Amount of Subsidy</h2>
       <ul class="l1">
         <li>
           The subsidy amount for a given employee on eligible remuneration paid
@@ -77,7 +77,7 @@
           or 75% of the employee’s pre-crisis weekly remuneration;
         </li>
       </ul>
-      <h2>Calculating Revenues</h2>
+      <h2 class="col-10 offset-1">Calculating Revenues</h2>
       <ul class="l1">
         <li>
           In recognition that the time between when revenue is earned and when
@@ -98,7 +98,7 @@
           revenues for the purpose of applying the revenue reduction test.
         </li>
       </ul>
-      <h2>Eligible Periods</h2>
+      <h2 class="col-10 offset-1">Eligible Periods</h2>
       <ul class="l1">
         <li>
           Eligibility is determined by the change in an eligible employer's
@@ -142,13 +142,13 @@
           </li>
         </ul>
       </ul>
-      <p>
+      <p class="col-10 offset-1">
         By qualifying at the level of income decline in a particular period, you
         automatically qualify for the following period. The table below outlines
         first three claiming period, the required reduction in revenue and the
         reference period for eligibility:
       </p>
-      <table>
+      <table class="col-xxl-10 offset-xxl-1 ms-1 ms-xxl-5">
         <tr>
           <th></th>
           <th>Claiming period</th>
@@ -160,7 +160,7 @@
           <td>March 15 to April 11</td>
           <td>15 %</td>
           <td>
-            <p>March 2020 over:</p>
+            <p class="col-10 offset-1">March 2020 over:</p>
             <ul class="l1">
               <li>March 2019 or</li>
               <li>Average of January and February 2020</li>
@@ -172,9 +172,9 @@
           <td>April 12 to May 9</td>
           <td>30 %</td>
           <td>
-            <p>Eligible for Period 1</p>
-            <p><b>OR</b></p>
-            <p>April 2020 over:</p>
+            <p class="col-10 offset-1">Eligible for Period 1</p>
+            <p class="col-10 offset-1"><b>OR</b></p>
+            <p class="col-10 offset-1">April 2020 over:</p>
             <ul class="l1">
               <li>April 2019 or</li>
               <li>Average of January and February 2020</li>
@@ -186,7 +186,7 @@
           <td>May 10 to June 6</td>
           <td>30 %</td>
           <td>
-            <p>Eligible for Period 2 OR May 2020 over:</p>
+            <p class="col-10 offset-1">Eligible for Period 2 OR May 2020 over:</p>
             <ul class="l1">
               <li>May 2019 or</li>
               <li>Average of January and February 2020</li>
@@ -194,7 +194,7 @@
           </td>
         </tr>
       </table>
-      <h2>Refund for Certain Payroll Contributions</h2>
+      <h2 class="col-10 offset-1">Refund for Certain Payroll Contributions</h2>
       <ul class="l1">
         <li>
           100% refund for certain employer-paid contributions to Employment
@@ -227,7 +227,7 @@
           eligible employer may claim.
         </li>
       </ul>
-      <h2>How to Apply</h2>
+      <h2 class="col-10 offset-1">How to Apply</h2>
       <ul class="l1">
         <li>
           Eligible employers will be able to apply for the CEWS through the
@@ -245,14 +245,14 @@
           subsidy of $1,375 per employee and $25,000 per employer.
         </li>
       </ul>
-      <h2>10% Wage Subsidy</h2>
-      <p>
+      <h2 class="col-10 offset-1">10% Wage Subsidy</h2>
+      <p class="col-10 offset-1">
         The employers that do not qualify for the Canada Emergency Wage Subsidy
         may continue to qualify for the 10% of remuneration paid from March 18
         to before June 20, up to a maximum subsidy of $1,375 per employee and
         $25,000 per employer.
       </p>
-      <button><b><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html">The Canada Emergency Wage Subsidy</a></b></button>
+      <button class="btn btn-secondary col-10 offset-1"><b><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html">The Canada Emergency Wage Subsidy</a></b></button>
     </div>
     <div v-else></div>
   </div>
@@ -264,15 +264,17 @@ export default {};
 
 <style lang="scss" scoped>
 @import "../../assets/style.scss";
-
+h1 {
+  font-family: $title;
+}
 .l1 {
   width: 90%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .l2 {
   margin-top: 0.5em;
-  width: 90%;
-  margin-left: 8%;
+  width: 95%;
+  // margin-left: 1%;
 }
 .l3 {
   margin: 0.5em 0;
@@ -301,11 +303,8 @@ span {
   margin-left: -10%;
 }
 button{
-    border-radius: 5px;
-    border: none;
     a{
-        color: black;
+        color: white;
     }
-    filter: drop-shadow(1px 1px 2px gray);
 }
 </style>

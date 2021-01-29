@@ -23,10 +23,6 @@ export default {
     HomeDescription,
     PageFooter
   },
-  mounted () {
-    console.log(screen.width);
-    console.log(window.innerWidth);
-  },
 };
 </script>
 

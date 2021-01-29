@@ -1,11 +1,5 @@
 <template>
   <div class="menu container-md">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb my-3">
-        <li class="breadcrumb-item"><a href="">Resource</a></li>
-        <li class="breadcrumb-item active" aria-current="page">News</li>
-      </ol>
-    </nav>
     <div class="menu-list col-11 py-md-3">
       <ul>
         <li class="list-item" @click="taxRelateGift">
@@ -16,10 +10,9 @@
                 关于赠与子女和其他人的相关税务问题
             </div>
         </li>
-        <li class="list-item" @click="AlterEgoTrust">Dapibus ac facilisis in</li>
-        <li class="list-item">Morbi leo risus</li>
-        <li class="list-item">Porta ac consectetur ac</li>
-        <li class="list-item">Vestibulum at eros</li>
+        <li class="list-item" @click="AlterEgoTrust">Six reasons to establish an Alter ego trust</li>
+        <li class="list-item" @click="TaxReturnInfo">报税基本信息以及文件清单</li>
+        <li class="list-item" @click="HoldingCompany">Do you need a holding company</li>
       </ul>
     </div>
   </div>
@@ -34,10 +27,16 @@ Vue.use(BootstrapVue);
 export default {
   methods: {
     taxRelateGift() {
-      this.$router.push("/resource/news/taxRelateGift");
+      this.$router.push("/resource/Finance&Taxation/taxRelateGift");
     },
     AlterEgoTrust() {
-      this.$router.push("/resource/news/AlterEgoTrust");
+      this.$router.push("/resource/Finance&Taxation/AlterEgoTrust");
+    },
+    TaxReturnInfo() {
+      this.$router.push("/resource/Finance&Taxation/TaxReturnInfo");
+    },
+    HoldingCompany() {
+      this.$router.push("/resource/Finance&Taxation/HoldingCompany");
     }
   },
 };

@@ -7,8 +7,8 @@ import ServiceItem from "../views/ServiceItemPage.vue";
 import Resource from "../views/Resource.vue";
 import ResourceCovid from "../views/ResourceCovid.vue"
 import ResourceCovidContent from "../views/ResourceCovidContent.vue";
-import ResourceNews from "../views/ResourceNews.vue"
-import ResourceNewsContent from "../views/ResourceNewsContent.vue";
+import ResourceFT from "../views/ResourceFT.vue"
+import ResourceFTContent from "../views/ResourceFTContent.vue";
 import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
@@ -34,27 +34,27 @@ const routes = [{
         component: ServiceItem
     },
     {
-        path: "/resource",
+        path: "/Resource",
         name: "Resource",
         component: Resource
     },
     {
-        path: "/resource/covid19",
+        path: "/Resource/covid19",
         name: "ResourceCovid",
         component: ResourceCovid
     },
     {
-        path: "/resource/news",
-        name: "ResourceNews",
-        component: ResourceNews
+        path: "/Resource/Finance&Taxation",
+        name: "ResourceFT",
+        component: ResourceFT
     },
     {
-        path: "/resource/news/*",
-        name: "ResourceNewsContent",
-        component: ResourceNewsContent
+        path: "/Resource/Finance&Taxation/*",
+        name: "ResourceFTContent",
+        component: ResourceFTContent
     },
     {
-        path: "/resource/covid19/*",
+        path: "/Resource/covid19/*",
         name: "ResourceCovidContent",
         component: ResourceCovidContent
     },

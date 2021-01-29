@@ -1,9 +1,16 @@
 <template>
-  <div class="menu">
-    <h3>../resource/</h3>
-    <ul>
-      <li @click="newsPage">News</li>
-      <li @click="covidPage">Covid-19</li>
+  <div class="menu container-md">
+    <ul class="menu-list col-11 py-md-3">
+      <li class="list-item" @click="newsPage">
+         <div v-if="this.$store.getters.lan">Finance & Taxation
+         </div>
+         <div v-else>财税知识
+         </div>
+      </li>
+      <li class="list-item" @click="covidPage">
+         <div v-if="this.$store.getters.lan">COVID-19 Benefits </div>
+        <div v-else>COVID-19 福利政策</div>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,7 +23,7 @@ export default {
       location.reload();
     },
     newsPage() {
-      this.$router.push("/resource/news");
+      this.$router.push("/resource/Finance&Taxation");
       location.reload();
     },
   },
@@ -25,34 +32,20 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-
 .menu {
-  min-height: 45vh;
-  margin-top: 2em;
-  width: 80%;
-  margin-left: 10%;
-  h3 {
-    color: $fontGray;
     font-family: $text;
-  }
-  li {
-    font-family: $title;
-    font-size: 1.2rem;
-    width: 90%;
-    margin: 1em 0 1em 10%;
+}
+.list-item{
     cursor: pointer;
-  }
+    font-size: 1rem;
+    margin: 1em 0 1em 10%;
 }
 @media only screen and (min-width: 768px) {
   .menu {
-    width: 70%;
-    margin: 2em 0 6em 15%;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .menu {
-    width: 60%;
-    margin: 2em 0 6em 20%;
+
+   .list-item{
+      font-size: 1.2rem;
+    }
   }
 }
 </style>

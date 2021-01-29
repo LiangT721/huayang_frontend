@@ -24,6 +24,7 @@
 
 <script>
 import Vue from 'vue'
+import cookies from "vue-cookies";
 import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -41,12 +42,26 @@ export default {
       this.english = true;
       this.chinese = false;
       this.$store.commit("language_toggle", true);
+      cookies.set("lan", true)
+      location.reload();
+
     },
     ShiftChinese() {
       this.english = false;
       this.chinese = true;
       this.$store.commit("language_toggle", false);
+      cookies.set("lan", false)
+      location.reload();
     },
+  },
+  mounted () {
+    if(this.$store.getters.lan){
+       this.english = true;
+      this.chinese = false;
+    }else {
+      this.english = false;
+      this.chinese = true;
+    };
   },
 };
 </script>

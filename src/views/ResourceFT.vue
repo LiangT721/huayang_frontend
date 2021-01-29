@@ -2,18 +2,20 @@
   <div class="res-news">
     <page-header />
     <resource-bar />
+    <bread-crumb />
     <new-menu />
     <page-footer />
   </div>
 </template>
 
 <script>
-import NewMenu from "../components/news/newMenu.vue";
+import BreadCrumb from '../components/BreadCrumb.vue';
+import NewMenu from "../components/Finance&Taxation/newMenu.vue";
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 import ResourceBar from "../components/resourceBar.vue";
 export default {
-  components: { pageHeader, ResourceBar, NewMenu, PageFooter },
+  components: { pageHeader, ResourceBar, NewMenu, PageFooter, BreadCrumb },
 };
 </script>
 
