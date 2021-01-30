@@ -60,8 +60,8 @@ export default new Vuex.Store({
                 chi: "我们的服务"
             },
             content: {
-                eng: "Michael Gao Inc., a senior certified public accountant (CGA) led the tax, accounting, financial advisory services professional institutions, was established in 2009. Over the years, the company dedicated to every customer to provide professional, timely and comprehensive service, adhere to the quality and integrity of the core values, so that we have established long-term partnership with many customers.",
-                chi: "嘉岳会计师事务所由高岳(Michael)注册会计师于2009年在加拿大的BC省成立.多年来，事务所的全体员工全心全意为每一位客户提供专业，及时和全面的服务. 每位同仁坚持质量和诚信的核心价值观，与众多客户建立了长期的伙伴关系.目前，公司的客户群体涵盖了房地产开发、投资控股、进出口贸易、电子商务、生产制造和经销批发、旅游、 酒店和餐饮，零售等领域. 用我们的专业, 助力您的成功 !"
+                eng: "At Yang Gao. CPA P.C Ltd, we provide bookkeeping, accounting, tax and advisory services to clients in the Saskatchewan and Alberta area. We offer specialized services to accommodate all personal and business accounting needs. Our goal is to help our clients meet regulatory obligations, minimize risks, create clarity and reduce tax burdens.",
+                chi: "华杨会计师事务所业务范围涉及个人业务，企业业务和企业家移民解除条件。我们将会为您量身定制专属的个人和商业会计服务计划。我们的目标是帮助我们的客户在合规的范围内最大限度的降低风险，合理的减少税务负担。"
             }
         },
         service_project: {
