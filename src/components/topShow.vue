@@ -1,5 +1,5 @@
 <template>
-  <div class="top-show">
+  <div class="top-show text-center">
     <div class="phone">Phone: <a href="tel:3062611887">(306) 261-1887</a></div>
     <div class="language-set">
       <div class="btn">
@@ -23,12 +23,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
 import cookies from "vue-cookies";
-import { BootstrapVue } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue)
 import "ant-design-vue/lib/date-picker/style/css";
 export default {
   data() {
@@ -179,10 +174,12 @@ a {
   .phone,
   a {
     font-size: 1rem;
+    text-decoration: none;
     transition: all 0.2s linear;
     &:hover {
       text-shadow: 3px 3px 5px rgba(242, 242, 242, 0.5);
       transform: scale(1.1);
+      color:white;
     }
   }
   .language-set {

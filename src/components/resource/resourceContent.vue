@@ -12,11 +12,8 @@
 export default {
   components: {
     "co-bf": () => import("@/components/content/resCoBF"),
-    // "co-cerb": () => import("@/components/content/resCoCERB"),
     "co-cers": () => import("@/components/content/resCoCERS"),
     "co-cews": () => import("@/components/content/resCoCEWS"),
-    // "co-ssrgi": () => import("@/components/content/resCoSSRGI"),
-    // "co-twse": () => import("@/components/content/resCoTWSE"),
     "co-crb":()=>import("@/components/content/resCoCRB"),
   },
   data() {

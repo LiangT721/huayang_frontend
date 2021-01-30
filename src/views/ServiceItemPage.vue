@@ -23,16 +23,10 @@ export default {
     PersonalServiceMenu:() => import("../components/service/personalTaxService/personalServiceMenu"),
     EnterpriseServiceMenu:() => import("../components/service/enterpriseService/enterpriseServiceMenu"),
     SINPMenu:() => import("../components/service/SINP/SINPMenu"),
-    personalDefault: () =>
-      import("../components/service/personalTaxService/defaultDisplay"),
-    ForeignAssetsDeclaration: () =>
-      import("../components/service/personalTaxService/ForeignAssetsDeclaration"
-      ),
-    SelfemploymentTaxReturn: () =>
-      import("../components/service/personalTaxService/SelfemploymentTaxReturn"
-      ),
-    TaxReturnofNonresident: () =>
-      import("../components/service/personalTaxService/TaxReturnofNonresident"),
+    personalDefault: () =>import("../components/service/personalTaxService/defaultDisplay"),
+    ForeignAssetsDeclaration: () =>import("../components/service/personalTaxService/ForeignAssetsDeclaration"),
+    SelfemploymentTaxReturn: () =>import("../components/service/personalTaxService/SelfemploymentTaxReturn"),
+    TaxReturnofNonresident: () =>import("../components/service/personalTaxService/TaxReturnofNonresident"),
     EnterpriseServiceDefault: ()=> import("../components/service/enterpriseService/enterpriseServiceDefault"),
     SINPDefault: ()=> import("../components/service/SINP/SINPDefault")
   },

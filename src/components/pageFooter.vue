@@ -52,22 +52,6 @@
             <div>9:00 ~ 17:00</div>
           </div>
         </div>
-        <!-- <div class="time" v-else>
-          <div v-if="this.$store.getters.lan">
-            <div>BUSINESS TIME:</div>
-            <div class="right">
-              <div>Monday ~ Friday</div>
-              <div>9:00 ~ 17:00</div>
-            </div>
-          </div>
-          <div v-else>
-            <div>营业时间:</div>
-            <div class="right">
-              <div>周一 ~ 周五</div>
-              <div>9:00 ~ 17:00</div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
     <div class="spliter"></div>

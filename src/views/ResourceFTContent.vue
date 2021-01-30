@@ -9,15 +9,10 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { BootstrapVue } from "bootstrap-vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
 import pageFooter from "../components/pageFooter.vue";
 import PageHeader from "../components/pageHeader.vue";
 import ResourceBar from "../components/resource/resourceBar";
 import BreadCrumb from "../components/BreadCrumb.vue";
-Vue.use(BootstrapVue);
 export default {
   components: {
     pageFooter,

@@ -15,23 +15,24 @@
     <div
       class="resource"
       :class="{ selected: resource }"
-      
       @mouseover="resourceMenuShow"
       @mouseleave="resourceMenuHide"
     >
-      <div v-if="this.$store.getters.lan" @click="resourcePage">RESOURCE</div>
-      <div v-else @click="resourcePage">资源</div>
-      <div
-        class="dropdown pc"
-        id="res-dropdown" v-if="resourceMenu"
-      >
+      <div @click="resourcePage">
+        <div v-if="this.$store.getters.lan">RESOURCE</div>
+        <div v-else @click="resourcePage">资源</div>
+      </div>
+      <div class="dropdown pc" id="res-dropdown" v-if="resourceMenu">
         <div class="news" @click="FinanceTaxation">
           <div v-if="this.$store.getters.lan">Finance & Taxation</div>
           <div v-else>财税知识</div>
         </div>
         <div class="covid" @click="covidPage">
-          <div v-if="this.$store.getters.lan">COVID-19 <br>Benefits </div>
-          <div v-else>COVID-19 <br> 福利政策</div>
+          <div v-if="this.$store.getters.lan">COVID-19 <br />Benefits</div>
+          <div v-else>
+            COVID-19 <br />
+            福利政策
+          </div>
         </div>
       </div>
     </div>
@@ -51,7 +52,7 @@ export default {
       service: false,
       resource: false,
       contact: false,
-      resourceMenu:false,
+      resourceMenu: false,
     };
   },
   methods: {
@@ -73,14 +74,16 @@ export default {
     covidPage() {
       this.$router.push("/resource/covid19");
     },
-    FinanceTaxation(){
-       this.$router.push("/resource/Finance&Taxation")
+    FinanceTaxation() {
+      this.$router.push("/resource/Finance&Taxation");
     },
     resourceMenuShow() {
-      this.resourceMenu = true;
+      setTimeout(() => {
+        this.resourceMenu = true;
+      }, 200);
     },
     resourceMenuHide() {
-      this.resourceMenu = false;
+        this.resourceMenu = false;
     },
   },
   mounted() {
@@ -111,7 +114,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-.pc{
+.pc {
   display: none;
 }
 .menu-bar {
@@ -159,7 +162,7 @@ export default {
   }
 }
 @media only screen and (min-width: 1280px) {
-  .pc{
+  .pc {
     display: block;
   }
   .menu-bar {

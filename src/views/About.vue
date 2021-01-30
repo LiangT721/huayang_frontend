@@ -49,11 +49,6 @@
 
 <script>
 import cookies from "vue-cookies";
-import Vue from "vue";
-import { BootstrapVue } from "bootstrap-vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-Vue.use(BootstrapVue);
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 export default {
