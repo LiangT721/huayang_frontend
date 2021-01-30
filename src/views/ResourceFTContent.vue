@@ -2,7 +2,7 @@
   <div class="newspage">
     <page-header />
     <resource-bar />
-    <bread-crumb  />
+    <bread-crumb />
     <component :is="current" class="content" />
     <page-footer />
   </div>
@@ -13,42 +13,44 @@ import Vue from "vue";
 import { BootstrapVue } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import pageFooter from '../components/pageFooter.vue';
-import PageHeader from '../components/pageHeader.vue';
-import ResourceBar from '../components/resourceBar.vue';
-import BreadCrumb from '../components/BreadCrumb.vue';
+import pageFooter from "../components/pageFooter.vue";
+import PageHeader from "../components/pageHeader.vue";
+import ResourceBar from "../components/resource/resourceBar";
+import BreadCrumb from "../components/BreadCrumb.vue";
 Vue.use(BootstrapVue);
 export default {
-  components: { 
-      pageFooter,
-      PageHeader,
-      ResourceBar,   
-      "taxRelateGift": () => import("@/components/Finance&Taxation/TaxRelateGift.vue"),
-      "AlterEgoTrust": () => import("@/components/Finance&Taxation/AlterEgoTrust.vue"),
-      "TaxReturnInfo": () => import("@/components/Finance&Taxation/TaxReturnInfo.vue"),
-      "HoldingCompany": () => import("@/components/Finance&Taxation/HoldingCompany.vue"),
+  components: {
+    pageFooter,
+    PageHeader,
+    ResourceBar,
+    taxRelateGift: () =>
+      import("../components/resource/Finance&Taxation/TaxRelateGift.vue"),
+    AlterEgoTrust: () =>
+      import("../components/resource/Finance&Taxation/AlterEgoTrust.vue"),
+    TaxReturnInfo: () =>
+      import("../components/resource/Finance&Taxation/TaxReturnInfo.vue"),
+    HoldingCompany: () =>
+      import("../components/resource/Finance&Taxation/HoldingCompany.vue"),
     BreadCrumb,
-    },
-    data() {
-      return {
-        current: "taxRelateGift"
-      }
-    },
+  },
+  data() {
+    return {
+      current: "taxRelateGift",
+    };
+  },
   mounted() {
     let path = this.$router.history.current.fullPath.replace("/resource/", "");
     console.log(path);
     if (path == "news/taxRelateGift") {
-      this.current = "taxRelateGift";}
-    else if (path == "news/AlterEgoTrust") {
+      this.current = "taxRelateGift";
+    } else if (path == "news/AlterEgoTrust") {
       this.current = "AlterEgoTrust";
-    }
-    else if (path == "news/TaxReturnInfo") {
+    } else if (path == "news/TaxReturnInfo") {
       this.current = "TaxReturnInfo";
-    }
-    else if (path == "news/HoldingCompany") {
+    } else if (path == "news/HoldingCompany") {
       this.current = "HoldingCompany";
     }
-  }
+  },
 };
 </script>
 
@@ -60,12 +62,12 @@ export default {
 }
 @media only screen and (min-width: 768px) {
   .newspage {
-  padding-bottom: 15em;
-}
+    padding-bottom: 15em;
+  }
 }
 @media only screen and (min-width: 1280px) {
   .newspage {
-  padding-bottom: 15em;
-}
+    padding-bottom: 15em;
+  }
 }
 </style>

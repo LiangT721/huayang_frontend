@@ -77,29 +77,6 @@
           >
         </div>
       </div>
-      <!-- <div class="service-item" @click="toServicePage4" >
-      <img src="../../assets/service4.jpg" alt="" class="service-image" />
-      <div class="service-title">
-        <div v-if="this.$store.getters.lan">
-          {{ this.$store.state.service_project.project4.title.eng }}
-        </div>
-        <div v-else>
-          {{ this.$store.state.service_project.project4.title.chi }}
-        </div>
-      </div>
-      <div class="service-description">
-        <div v-if="this.$store.getters.lan">
-          {{ this.$store.state.service_project.project4.description.eng }}
-        </div>
-        <div v-else>
-          {{ this.$store.state.service_project.project4.description.chi }}
-        </div>
-      </div>
-      <div class="more"><u>
-        <div v-if="this.$store.getters.lan">More Information</div>
-        <div v-else>获取更多信息</div></u>
-      </div>
-    </div> -->
     </div>
   </div>
 </template>
@@ -120,9 +97,6 @@ export default {
     },
     toServicePage3() {
       this.$router.push("/service/project3");
-    },
-    toServicePage4() {
-      this.$router.push("/service/project4");
     },
   },
 };

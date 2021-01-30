@@ -12,8 +12,8 @@
 import BreadCrumb from '../components/BreadCrumb.vue';
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
-import ResourceBar from "../components/resourceBar.vue";
-import ResourceMenu from "../components/resourceMenu.vue";
+import ResourceBar from "../components/resource/resourceBar";
+import ResourceMenu from "../components/resource/resourceMenu";
 export default {
   components: {
     pageHeader,

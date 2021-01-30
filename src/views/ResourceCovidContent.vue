@@ -12,19 +12,16 @@
 import BreadCrumb from '../components/BreadCrumb.vue';
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
-import ResourceBar from "../components/resourceBar.vue";
+import ResourceBar from "../components/resource/resourceBar";
 export default {
   components: {
     pageHeader,
     ResourceBar,
     PageFooter,
-    "co-bf": () => import("@/components/content/resCoBF"),
-    // "co-cerb": () => import("@/components/content/resCoCERB"),
-    "co-cers": () => import("@/components/content/resCoCERS"),
-    "co-cews": () => import("@/components/content/resCoCEWS"),
-    // "co-ssrgi": () => import("@/components/content/resCoSSRGI"),
-    // "co-twse": () => import("@/components/content/resCoTWSE"),
-    "co-crb": () => import("@/components/content/resCoCRB"),
+    "co-bf": () => import("../components/resource/covid19/resCoBF"),
+    "co-cers": () => import("../components/resource/covid19/resCoCERS"),
+    "co-cews": () => import("../components/resource/covid19/resCoCEWS"),
+    "co-crb": () => import("../components/resource/covid19/resCoCRB"),
     BreadCrumb,
   },
   data() {
@@ -41,12 +38,8 @@ export default {
       this.current = "co-bf";
     } else if (path == "covid19/ssrgi") {
       this.current = "co-ssrgi";
-      // }else if (path == "covid19/cers") {
-      //     this.current = "co-bf"
     } else if (path == "covid19/cews") {
       this.current = "co-cews";
-      // } else if (path == "covid19/twes") {
-      //   this.current = "co-twse";
     } else if (path == "covid19/crb") {
       this.current = "co-crb";
     }

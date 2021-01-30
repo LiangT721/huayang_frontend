@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style.scss";
+@import "../../assets/style.scss";
 
 .bar {
   width: 100%;
@@ -42,6 +42,6 @@ export default {
   justify-items: center;
   font-family: $title;
   font-size: 2rem;
-  background-image: url("../assets/blue-watercolor-texture-background.jpg");
+  background-image: url("../../assets/blue-watercolor-texture-background.jpg");
 }
 </style>

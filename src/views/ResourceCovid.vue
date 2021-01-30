@@ -10,10 +10,10 @@
 
 <script>
 import BreadCrumb from '../components/BreadCrumb.vue'
-import CovidMenu from '../components/covidMenu.vue'
 import PageFooter from '../components/pageFooter.vue'
 import pageHeader from '../components/pageHeader.vue'
-import ResourceBar from '../components/resourceBar.vue'
+import CovidMenu from '../components/resource/covidMenu.vue'
+import ResourceBar from '../components/resource/resourceBar'
     export default {
   components: { pageHeader, ResourceBar, CovidMenu, PageFooter, BreadCrumb },
         

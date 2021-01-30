@@ -220,7 +220,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/style.scss";
+@import "../../../assets/style.scss";
 
 h1 {
   font-family: $title;
