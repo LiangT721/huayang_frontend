@@ -15,15 +15,15 @@
     <div
       class="resource"
       :class="{ selected: resource }"
-      @click="resourcePage"
+      
       @mouseover="resourceMenuShow"
       @mouseleave="resourceMenuHide"
     >
-      <div v-if="this.$store.getters.lan">RESOURCE</div>
-      <div v-else>资源</div>
+      <div v-if="this.$store.getters.lan" @click="resourcePage">RESOURCE</div>
+      <div v-else @click="resourcePage">资源</div>
       <div
         class="dropdown pc"
-        id="res-dropdown"
+        id="res-dropdown" v-if="resourceMenu"
       >
         <div class="news" @click="FinanceTaxation">
           <div v-if="this.$store.getters.lan">Finance & Taxation</div>
@@ -51,7 +51,7 @@ export default {
       service: false,
       resource: false,
       contact: false,
-      // resourceMenu:false
+      resourceMenu:false,
     };
   },
   methods: {
@@ -77,26 +77,33 @@ export default {
        this.$router.push("/resource/Finance&Taxation")
     },
     resourceMenuShow() {
-      const resource = document.getElementById("res-dropdown");
-      resource.style.opacity = "1";
+      this.resourceMenu = true;
     },
     resourceMenuHide() {
-      const resource = document.getElementById("res-dropdown");
-      resource.style.opacity = "0";
+      this.resourceMenu = false;
     },
   },
   mounted() {
-
-    if (this.$router.history.current.name == "Home") {
-      this.home = true;
-    } else if (this.$router.history.current.name == "About") {
-      this.about = true;
-    } else if (this.$router.history.current.name == "Service") {
-      this.service = true;
-    } else if (this.$router.history.current.name == "Resource") {
-      this.resource = true;
-    } else if (this.$router.history.current.name == "Contact") {
-      this.contact = true;
+    const path = this.$router.history.current.fullPath;
+    const menuName = path.split("/")[1];
+    switch (menuName) {
+      case "":
+        this.home = true;
+        break;
+      case "about":
+        this.about = true;
+        break;
+      case "service":
+        this.service = true;
+        break;
+      case "resource":
+        this.resource = true;
+        break;
+      case "contact":
+        this.contact = true;
+        break;
+      default:
+        break;
     }
   },
 };
@@ -164,9 +171,9 @@ export default {
     }
     .resource {
       position: relative;
-      #res-dropdown {
-        opacity: 0;
-      }
+      // #res-dropdown {
+      //   opacity: 0;
+      // }
       .dropdown {
         transition: all 0.3s linear;
         position: absolute;

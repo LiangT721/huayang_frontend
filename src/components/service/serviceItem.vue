@@ -2,7 +2,7 @@
   <div class="service-items container-lg py-5">
     <!-- sdsdsds -->
     <div class="container d-xl-flex  justify-content-xl-between">
-      <div class="service-item mx-auto pb-5" @click="toServicePage1">
+      <div class="service-item mx-auto pb-5" @click="toPersonalTaxService">
         <img  src="../../assets/service1.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -27,7 +27,7 @@
           >
         </div>
       </div>
-      <div class="service-item mx-auto pb-5" @click="toServicePage2">
+      <div class="service-item mx-auto pb-5" @click="toEnterpriseService">
         <img src="../../assets/service2.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -52,7 +52,7 @@
           >
         </div>
       </div>
-      <div class="service-item mx-auto pb-5" @click="toServicePage3">
+      <div class="service-item mx-auto pb-5" @click="toSINP">
         <img src="../../assets/service3.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -89,14 +89,14 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 Vue.use(BootstrapVue);
 export default {
   methods: {
-    toServicePage1() {
-      this.$router.push("/service/project1");
+    toPersonalTaxService() {
+      this.$router.push("/service/PersonalTaxService");
     },
-    toServicePage2() {
-      this.$router.push("/service/project2");
+    toEnterpriseService() {
+      this.$router.push("/service/EnterpriseService");
     },
-    toServicePage3() {
-      this.$router.push("/service/project3");
+    toSINP() {
+      this.$router.push("/service/SINP");
     },
   },
 };

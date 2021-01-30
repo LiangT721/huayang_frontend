@@ -40,9 +40,6 @@ export default {
       this.menu_show = !this.menu_show;
     },
   },
-  mounted() {
-    console.log(this.$store.getters.device);
-  },
 };
 </script>
 

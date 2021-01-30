@@ -34,17 +34,17 @@ const routes = [{
         component: ServiceItem
     },
     {
-        path: "/Resource",
+        path: "/resource",
         name: "Resource",
         component: Resource
     },
     {
-        path: "/Resource/covid19",
+        path: "/resource/covid19",
         name: "ResourceCovid",
         component: ResourceCovid
     },
     {
-        path: "/Resource/Finance&Taxation",
+        path: "/resource/Finance&Taxation",
         name: "ResourceFT",
         component: ResourceFT
     },

@@ -43,34 +43,10 @@ export default {
     box-sizing: border-box;
     position:relative;
     padding-bottom: 25em;
-    // width: 100%;
-    // overflow: hidden;
-}
-.about-service{
-    // width:70%;
-    // margin-top:4em;
-    // margin-left:15%;
-    // .about-title{
-    //     font-family: $title;
-    //     font-size:2rem;
-    //     text-align: center;
-    //     color:$fontBlue
-    // }
-    // .about-content{
-    //     font-family: $text;
-    //     font-size:1rem;
-    //     text-align: center;
-    //     line-height: 2em;
-    // }
 }
 @media only screen and (min-width: 768px) {
     .service-page{
         padding-bottom:15em
-    }
-    .about-service{
-        // .about-content{
-        //     text-align: left;
-        // }
     }
 }
 @media only screen and (min-width: 1280px) {

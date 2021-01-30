@@ -1,7 +1,7 @@
 <template>
   <div class="menu container-md">
     <ul class="menu-list col-11 py-md-3">
-      <li class="list-item" @click="newsPage">
+      <li class="list-item" @click="FTPage">
          <div v-if="this.$store.getters.lan">Finance & Taxation
          </div>
          <div v-else>财税知识
@@ -20,11 +20,9 @@ export default {
   methods: {
     covidPage() {
       this.$router.push("/resource/covid19");
-      location.reload();
     },
-    newsPage() {
+    FTPage() {
       this.$router.push("/resource/Finance&Taxation");
-      location.reload();
     },
   },
 };

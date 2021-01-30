@@ -3,10 +3,10 @@
     <div class="service-select text-capitalize ">
       <div class="service-selection px-3 fs-6" :class="Default" @click="toDefault">
         <div v-if="this.$store.getters.lan">
-          About Personal Tax Service
+          About SINP
         </div>
         <div v-else>
-          关于个人业务
+          关于SINP
         </div>
       </div>
       <div class="service-selection px-3 fs-6" :class="project1" @click="toService1">
