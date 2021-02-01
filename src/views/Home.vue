@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home page">
     <page-header />
     <home-slider />
     <home-story />
@@ -17,17 +17,18 @@ import PageHeader from '../components/pageHeader.vue';
 
 export default {
   components: {
-    PageHeader,
     HomeSlider,
     HomeStory,
     HomeDescription,
-    PageFooter
+    PageFooter,
+    PageHeader
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
+
 @media only screen and (min-width: 768px) {}
 @media only screen and (min-width: 1280px) {}
 .home{

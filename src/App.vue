@@ -28,5 +28,15 @@ h1{
 p,a,li{
   font-family: $text;
 }
-
+.page{
+  min-height: 100vh;
+  padding-bottom: 10em;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .page{
+  padding-bottom: 5em;
+  }
+}
+@media only screen and (min-width: 1280px) {}
 </style>

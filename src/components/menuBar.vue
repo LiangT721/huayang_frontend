@@ -12,17 +12,17 @@
       <div v-if="this.$store.getters.lan">SERVICES</div>
       <div v-else>服务</div>
     </div>
+
     <div
       class="resource"
       :class="{ selected: resource }"
-      @mouseover="resourceMenuShow"
-      @mouseleave="resourceMenuHide"
+      v-b-hover="handleHover"
     >
       <div @click="resourcePage">
         <div v-if="this.$store.getters.lan">RESOURCE</div>
         <div v-else @click="resourcePage">资源</div>
       </div>
-      <div class="dropdown pc" id="res-dropdown" v-if="resourceMenu">
+      <div class="dropdown pc bg-white" id="res-dropdown" v-if="isHover">
         <div class="news" @click="FinanceTaxation">
           <div v-if="this.$store.getters.lan">Finance & Taxation</div>
           <div v-else>财税知识</div>
@@ -53,6 +53,7 @@ export default {
       resource: false,
       contact: false,
       resourceMenu: false,
+      isHover: false,
     };
   },
   methods: {
@@ -77,14 +78,19 @@ export default {
     FinanceTaxation() {
       this.$router.push("/resource/Finance&Taxation");
     },
-    resourceMenuShow() {
-      setTimeout(() => {
-        this.resourceMenu = true;
-      }, 200);
+    handleHover(hovered) {
+      console.log(this.isHover);
+      this.isHover = hovered;
+      console.log(this.isHover);
     },
-    resourceMenuHide() {
-        this.resourceMenu = false;
-    },
+    // resourceMenuShow() {
+    //   setTimeout(() => {
+    //     this.resourceMenu = true;
+    //   }, 200);
+    // },
+    // resourceMenuHide() {
+    //     this.resourceMenu = false;
+    // },
   },
   mounted() {
     const path = this.$router.history.current.fullPath;
@@ -170,30 +176,21 @@ export default {
     > div {
       transition: all 0.3s ease-in-out;
       font-size: 1rem;
-      // border: 1px solid #fff;
     }
     .resource {
       position: relative;
-      // #res-dropdown {
-      //   opacity: 0;
-      // }
       .dropdown {
         transition: all 0.3s linear;
         position: absolute;
-        background-color: $bgcBlue;
         display: grid;
         grid-template-rows: 1fr 1fr;
-        border-radius: 5px;
         top: 100%;
-        // left: 50%;
-        color: white;
         filter: drop-shadow(1px 1px 3px rgba(98, 98, 98, 0.685));
         > div {
           padding: 0.5em;
           &:hover {
-            background-color: #fff;
-            color: $darkColor;
-            border-radius: 5px;
+            background-color: $fontBlue;
+            color: #fff;
           }
         }
       }
