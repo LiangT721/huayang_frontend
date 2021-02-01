@@ -24,7 +24,7 @@
       </div>
       <div class="dropdown pc bg-white" id="res-dropdown" v-if="isHover">
         <div class="news" @click="FinanceTaxation">
-          <div v-if="this.$store.getters.lan">Finance & Taxation</div>
+          <div v-if="this.$store.getters.lan">Finance <br> & Taxation</div>
           <div v-else>财税知识</div>
         </div>
         <div class="covid" @click="covidPage">
@@ -44,6 +44,9 @@
 </template>
 
 <script>
+import Vue from "vue";
+import { BootstrapVue } from "bootstrap-vue";
+Vue.use(BootstrapVue)
 export default {
   data() {
     return {

@@ -25,6 +25,12 @@ export default {
       } else {
         this.title = "COVID-19 福利政策";
       }
+    } else {
+         if (this.$store.getters.lan) {
+        this.title = "Resource";
+      } else {
+        this.title = "资源";
+      }
     }
   },
 };
