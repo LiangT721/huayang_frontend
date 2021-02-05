@@ -1,37 +1,78 @@
 <template>
-  <div class="service-menu mt-5 pt-5">  
-    <div class="service-select text-capitalize ">
-      <div class="service-selection px-3 fs-6" :class="Default" @click="toDefault">
-        <div v-if="this.$store.getters.lan">
-          About Enterprise Service
-        </div>
-        <div v-else>
-          关于企业业务
-        </div>
+  <div class="service-menu mt-5 pt-5">
+    <div class="service-select text-capitalize">
+      <div
+        class="service-selection px-3 fs-6"
+        :class="Default"
+        @click="toDefault"
+      >
+        <div v-if="this.$store.getters.lan">About Enterprise Service</div>
+        <div v-else>关于企业业务</div>
       </div>
-      <div class="service-selection px-3 fs-6" :class="project1" @click="toService1">
-        <div v-if="this.$store.getters.lan">
-          Start a company
-        </div>
-        <div v-else>
-         成立公司
-        </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project1"
+        @click="toService1"
+      >
+        <div v-if="this.$store.getters.lan">Start a company</div>
+        <div v-else>成立公司</div>
       </div>
-      <div class="service-selection px-3 fs-6" :class="project2" @click="toService2">
-        <div v-if="this.$store.getters.lan">
-          Company tax return
-        </div>
-        <div v-else>
-          公司税务申报
-        </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project2"
+        @click="toService2"
+      >
+        <div v-if="this.$store.getters.lan">Company tax return</div>
+        <div v-else>公司税务申报</div>
       </div>
-      <div class="service-selection px-3 fs-6" :class="project3" @click="toService3">
-        <div v-if="this.$store.getters.lan">
-          Tax return of Non-resident for tax purpose
-        </div>
-        <div v-else>
-          非税务居民的报税
-        </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project3"
+        @click="toService3"
+      >
+        <div v-if="this.$store.getters.lan">Apply for GST</div>
+        <div v-else>申请GST</div>
+      </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project4"
+        @click="toService4"
+      >
+        <div v-if="this.$store.getters.lan">Annual Audit</div>
+        <div v-else>年度审计</div>
+      </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project5"
+        @click="toService5"
+      >
+        <div v-if="this.$store.getters.lan">Financial system establishment and bookkeeping
+</div>
+        <div v-else>财务系统建立及记账</div>
+      </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project6"
+        @click="toService6"
+      >
+        <div v-if="this.$store.getters.lan">Payroll Services</div>
+        <div v-else>工资核算</div>
+      </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project7"
+        @click="toService7"
+      >
+        <div v-if="this.$store.getters.lan">consulting service</div>
+        <div v-else>咨询服务</div>
+      </div>
+      <div
+        class="service-selection px-3 fs-6"
+        :class="project8"
+        @click="toService8"
+      >
+        <div v-if="this.$store.getters.lan">financialPartner</div>
+        <div v-else>财务合作伙伴</div>
       </div>
     </div>
   </div>
@@ -41,25 +82,45 @@
 export default {
   data() {
     return {
-      Default:"selected",
+      Default: "selected",
       project1: "unselected",
       project2: "unselected",
       project3: "unselected",
-      btn:""
+      project4: "unselected",
+      project5: "unselected",
+      project6: "unselected",
+      project7: "unselected",
+      project8: "unselected",
+      btn: "",
     };
   },
   methods: {
-    toDefault(){
-      this.selectService("personalDefault");
+    toDefault() {
+      this.selectService("enterpriseServiceDefault");
     },
     toService1() {
-      this.selectService("ForeignAssetsDeclaration");
+      this.selectService("startCompany");
     },
     toService2() {
-      this.selectService("SelfemploymentTaxReturn");
+      this.selectService("companyTaxReturn");
     },
     toService3() {
-      this.selectService("TaxReturnofNonresident");
+      this.selectService("applyForGST");
+    },
+    toService4() {
+      this.selectService("annualAudit");
+    },
+    toService5() {
+      this.selectService("FinancialSystemEstablishment");
+    },
+    toService6() {
+      this.selectService("payrollServices");
+    },
+    toService7() {
+      this.selectService("consultingServices");
+    },
+    toService8() {
+      this.selectService("financialPartner");
     },
     selectService(data) {
       this.$emit("toggleService", data);
@@ -69,26 +130,96 @@ export default {
   watch: {
     btn(newValue) {
       console.log(newValue);
-      if (this.btn == "ForeignAssetsDeclaration") {
+      if (this.btn == "startCompany") {
+        this.Default = "unselected";
         this.project1 = "selected";
         this.project2 = "unselected";
         this.project3 = "unselected";
-        this.default = "unselected";
-      } else if (this.btn == "SelfemploymentTaxReturn") {
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "companyTaxReturn") {
+        this.Default = "unselected";
         this.project1 = "unselected";
         this.project2 = "selected";
         this.project3 = "unselected";
-        this.default = "unselected";
-      } else if (this.btn == "TaxReturnofNonresident") {
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "applyForGST") {
+        this.Default = "unselected";
         this.project1 = "unselected";
         this.project2 = "unselected";
         this.project3 = "selected";
-        this.default = "unselected";
-      } else if (this.btn == "personalDefault") {
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "annualAudit") {
+        this.Default = "unselected";
         this.project1 = "unselected";
         this.project2 = "unselected";
         this.project3 = "unselected";
+        this.project4 = "selected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "FinancialSystemEstablishment") {
+        this.Default = "unselected";
+        this.project1 = "unselected";
+        this.project2 = "unselected";
+        this.project3 = "unselected";
+        this.project4 = "unselected";
+        this.project5 = "selected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "payrollServices") {
+        this.Default = "unselected";
+        this.project1 = "unselected";
+        this.project2 = "unselected";
+        this.project3 = "unselected";
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "selected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
+      } else if (this.btn == "consultingServices") {
+        this.Default = "unselected";
+        this.project1 = "unselected";
+        this.project2 = "unselected";
+        this.project3 = "unselected";
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "selected";
+        this.project8 = "unselected";
+      } else if (this.btn == "financialPartner") {
+        this.Default = "unselected";
+        this.project1 = "unselected";
+        this.project2 = "unselected";
+        this.project3 = "unselected";
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "selected";
+      } else if (this.btn == "enterpriseServiceDefault") {
         this.Default = "selected";
+        this.project1 = "unselected";
+        this.project2 = "unselected";
+        this.project3 = "unselected";
+        this.project4 = "unselected";
+        this.project5 = "unselected";
+        this.project6 = "unselected";
+        this.project7 = "unselected";
+        this.project8 = "unselected";
       }
     },
   },
@@ -129,7 +260,6 @@ export default {
   }
 }
 @media only screen and (min-width: 1280px) {
-
   .service-select {
     margin-top: 2em;
     grid-template-columns: 1fr;

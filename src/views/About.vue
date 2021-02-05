@@ -15,7 +15,7 @@
         <img class="py-5 px-0 col-md-6 offset-md-3 d-xxl-none" src="../assets/about.jpg" alt="" />
         <div class="container-sm text-center text-md-start">
           <div v-if="this.$store.getters.lan" class="container">
-            <p class="content fs-5">
+            <p class="content fs-5 ">
               Staffed by experienced accountants and tax experts, Yang Gao. CPA
               P.C Ltd has provided service in Saskatoon and Alberta for years,
               we have helped every client to achieve its own goal by developing

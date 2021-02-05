@@ -38,20 +38,20 @@ export default new Vuex.Store({
         },
         homepage_project: {
             project1: {
-                eng: "project1",
-                chi: "服务1"
+                eng: "Personal tax services",
+                chi: "个人业务"
             },
             project2: {
-                eng: "project2",
-                chi: "服务2"
+                eng: "Enterprise services",
+                chi: "企业业务"
             },
             project3: {
-                eng: "project3",
-                chi: "服务3"
+                eng: "Help immigrant entrepreneurs from SINP Entrepreneur Category",
+                chi: "移民解除条件"
             },
             project4: {
-                eng: "project4",
-                chi: "服务4"
+                eng: "Company Tax Return",
+                chi: "公司税务申报"
             },
         },
         servicepage_about: {

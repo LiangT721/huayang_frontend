@@ -40,7 +40,6 @@ export default {
 }
 @media only screen and (min-width: 768px) {
   .menu {
-
    .list-item{
       font-size: 1.2rem;
     }

@@ -2,7 +2,7 @@
   <div class="home-service">
     <div class="service">
       <img src="../assets/service1.jpg" alt="" />
-      <div class="service-name">
+      <div class="service-name" @click="toPersonalTaxService">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.homepage_project.project1.eng }}
         </div>
@@ -11,7 +11,7 @@
     </div>
     <div class="service">
       <img src="../assets/service2.jpg" alt="" />
-      <div class="service-name">
+      <div class="service-name" @click="toEnterpriseService">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.homepage_project.project2.eng }}
         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="service">
       <img src="../assets/service3.jpg" alt="" />
-      <div class="service-name">
+      <div class="service-name" @click="toSINP">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.homepage_project.project3.eng }}
         </div>
@@ -40,7 +40,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+   methods: {
+    toPersonalTaxService() {
+      this.$router.push("/service/PersonalTaxService");
+    },
+    toEnterpriseService() {
+      this.$router.push("/service/EnterpriseService");
+    },
+    toSINP() {
+      this.$router.push("/service/SINP");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

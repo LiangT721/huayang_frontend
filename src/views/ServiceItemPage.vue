@@ -28,6 +28,14 @@ export default {
     SelfemploymentTaxReturn: () =>import("../components/service/personalTaxService/SelfemploymentTaxReturn"),
     TaxReturnofNonresident: () =>import("../components/service/personalTaxService/TaxReturnofNonresident"),
     EnterpriseServiceDefault: ()=> import("../components/service/enterpriseService/enterpriseServiceDefault"),
+    startCompany: ()=> import("../components/service/enterpriseService/startCompany"),
+    companyTaxReturn: ()=> import("../components/service/enterpriseService/companyTaxReturn"),
+    applyForGST: ()=> import("../components/service/enterpriseService/applyForGST"),
+    annualAudit: ()=> import("../components/service/enterpriseService/annualAudit"),
+    FinancialSystemEstablishment: ()=> import("../components/service/enterpriseService/FinancialSystemEstablishment"),
+    payrollServices: ()=> import("../components/service/enterpriseService/payrollServices"),
+    consultingServices: ()=> import("../components/service/enterpriseService/consultingServices"),
+    financialPartner: ()=> import("../components/service/enterpriseService/financialPartner"),
     SINPDefault: ()=> import("../components/service/SINP/SINPDefault")
   },
   data() {
