@@ -48,6 +48,7 @@ export default {
   justify-items: center;
   font-family: $title;
   font-size: 2rem;
-  background-image: url("../../assets/blue-watercolor-texture-background.jpg");
+  border-bottom: 1px solid #d1d1d1;
+  // background-image: url("../../assets/blue-watercolor-texture-background.jpg");
 }
 </style>

@@ -82,18 +82,8 @@ export default {
       this.$router.push("/resource/Finance&Taxation");
     },
     handleHover(hovered) {
-      console.log(this.isHover);
       this.isHover = hovered;
-      console.log(this.isHover);
     },
-    // resourceMenuShow() {
-    //   setTimeout(() => {
-    //     this.resourceMenu = true;
-    //   }, 200);
-    // },
-    // resourceMenuHide() {
-    //     this.resourceMenu = false;
-    // },
   },
   mounted() {
     const path = this.$router.history.current.fullPath;

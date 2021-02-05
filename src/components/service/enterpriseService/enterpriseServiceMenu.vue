@@ -11,18 +11,18 @@
       </div>
       <div class="service-selection px-3 fs-6" :class="project1" @click="toService1">
         <div v-if="this.$store.getters.lan">
-          Foreign assets declaration
+          Start a company
         </div>
         <div v-else>
-         海外资产申报
+         成立公司
         </div>
       </div>
       <div class="service-selection px-3 fs-6" :class="project2" @click="toService2">
         <div v-if="this.$store.getters.lan">
-          Self-employment tax return
+          Company tax return
         </div>
         <div v-else>
-          自雇纳税申报
+          公司税务申报
         </div>
       </div>
       <div class="service-selection px-3 fs-6" :class="project3" @click="toService3">

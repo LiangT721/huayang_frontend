@@ -15,7 +15,7 @@
         <img class="py-5 px-0 col-md-6 offset-md-3 d-xxl-none" src="../assets/about.jpg" alt="" />
         <div class="container-sm text-center text-md-start">
           <div v-if="this.$store.getters.lan" class="container">
-            <p class="fs-5">
+            <p class="content fs-5">
               Staffed by experienced accountants and tax experts, Yang Gao. CPA
               P.C Ltd has provided service in Saskatoon and Alberta for years,
               we have helped every client to achieve its own goal by developing
@@ -26,7 +26,7 @@
               distribution wholesale, tourism, hotel and catering, software
               engineering, retail and other fields.
             </p>
-            <p class="fs-5">
+            <p class="content fs-5">
               Blending professional knowledge and customer service into a
               premium package, we've helped individuals and local companies with
               everything from simple tax return, tax planning to asset
@@ -81,6 +81,11 @@ export default {
   .pc-img{
     height: 40vh;
     object-fit: cover;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  .content{
+    font-size: 0.8rem;
   }
 }
 </style>
