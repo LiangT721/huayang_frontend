@@ -83,10 +83,5 @@ export default {
     object-fit: cover;
   }
 }
-@media only screen and (min-width: 2400px) {
-  .content{
-    font-size: 0.6rem;
-    color: red;
-  }
-}
+
 </style>
