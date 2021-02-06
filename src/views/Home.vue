@@ -29,10 +29,16 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style.scss";
 
-@media only screen and (min-width: 768px) {}
-@media only screen and (min-width: 1280px) {}
 .home{
   position: relative;
+  padding-bottom: 22em;
 }
+@media only screen and (min-width: 768px) {
+  .home{
+  padding-bottom: 12em;
+}
+
+}
+@media only screen and (min-width: 1280px) {}
 
 </style>

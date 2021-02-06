@@ -9,4 +9,12 @@ $fontGray:#5c677d;
 $title: 'Cabin';
 $text: 'Rubik';
 $shadow: filter;
+.title-family {
+    font-family: 'Cabin';
+}
+
+.text-family {
+    font-family: 'Rubik';
+}
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss"
