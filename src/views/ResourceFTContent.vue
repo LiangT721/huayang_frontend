@@ -2,7 +2,7 @@
   <div class="newspage">
     <page-header />
     <resource-bar />
-    <bread-crumb />
+    <!-- <bread-crumb /> -->
     <component :is="current" class="content" />
     <page-footer />
   </div>
@@ -12,7 +12,7 @@
 import pageFooter from "../components/pageFooter.vue";
 import PageHeader from "../components/pageHeader.vue";
 import ResourceBar from "../components/resource/resourceBar";
-import BreadCrumb from "../components/BreadCrumb.vue";
+// import BreadCrumb from "../components/BreadCrumb.vue";
 export default {
   components: {
     pageFooter,
@@ -26,7 +26,7 @@ export default {
       import("../components/resource/Finance&Taxation/TaxReturnInfo.vue"),
     HoldingCompany: () =>
       import("../components/resource/Finance&Taxation/HoldingCompany.vue"),
-    BreadCrumb,
+    // BreadCrumb,
   },
   data() {
     return {
@@ -36,15 +36,16 @@ export default {
   mounted() {
     let path = this.$router.history.current.fullPath.replace("/resource/", "");
     console.log(path);
-    if (path == "news/taxRelateGift") {
+    if (path == "Finance&Taxation/taxRelateGift") {
       this.current = "taxRelateGift";
-    } else if (path == "news/AlterEgoTrust") {
+    } else if (path == "Finance&Taxation/AlterEgoTrust") {
       this.current = "AlterEgoTrust";
-    } else if (path == "news/TaxReturnInfo") {
+    } else if (path == "Finance&Taxation/TaxReturnInfo") {
       this.current = "TaxReturnInfo";
-    } else if (path == "news/HoldingCompany") {
+    } else if (path == "Finance&Taxation/HoldingCompany") {
       this.current = "HoldingCompany";
     }
+    console.log(this.current)
   },
 };
 </script>

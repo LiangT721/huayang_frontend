@@ -2,14 +2,14 @@
   <div class="res-cov-con">
     <page-header />
     <resource-bar />
-    <bread-crumb />
+    <!-- <bread-crumb /> -->
     <component :is="current" class="content"></component>
     <page-footer />
   </div>
 </template>
 
 <script>
-import BreadCrumb from '../components/BreadCrumb.vue';
+// import BreadCrumb from '../components/BreadCrumb.vue';
 import PageFooter from "../components/pageFooter.vue";
 import pageHeader from "../components/pageHeader.vue";
 import ResourceBar from "../components/resource/resourceBar";
@@ -22,7 +22,7 @@ export default {
     "co-cers": () => import("../components/resource/covid19/resCoCERS"),
     "co-cews": () => import("../components/resource/covid19/resCoCEWS"),
     "co-crb": () => import("../components/resource/covid19/resCoCRB"),
-    BreadCrumb,
+    // BreadCrumb,
   },
   data() {
     return {

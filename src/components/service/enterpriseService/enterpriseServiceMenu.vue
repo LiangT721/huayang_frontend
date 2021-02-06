@@ -46,8 +46,9 @@
         :class="project5"
         @click="toService5"
       >
-        <div v-if="this.$store.getters.lan">Financial system establishment and bookkeeping
-</div>
+        <div v-if="this.$store.getters.lan">
+          Financial system establishment and bookkeeping
+        </div>
         <div v-else>财务系统建立及记账</div>
       </div>
       <div
@@ -129,99 +130,116 @@ export default {
   },
   watch: {
     btn(newValue) {
-      console.log(newValue);
-      if (this.btn == "startCompany") {
-        this.Default = "unselected";
-        this.project1 = "selected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "companyTaxReturn") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "selected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "applyForGST") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "selected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "annualAudit") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "selected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "FinancialSystemEstablishment") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "selected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "payrollServices") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "selected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
-      } else if (this.btn == "consultingServices") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "selected";
-        this.project8 = "unselected";
-      } else if (this.btn == "financialPartner") {
-        this.Default = "unselected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "selected";
-      } else if (this.btn == "enterpriseServiceDefault") {
-        this.Default = "selected";
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.project4 = "unselected";
-        this.project5 = "unselected";
-        this.project6 = "unselected";
-        this.project7 = "unselected";
-        this.project8 = "unselected";
+      switch (newValue) {
+        case "enterpriseServiceDefault":
+          this.Default = "selected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "startCompany":
+          this.Default = "unselected";
+          this.project1 = "selected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "companyTaxReturn":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "selected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "applyForGST":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "selected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "annualAudit":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "selected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "FinancialSystemEstablishment":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "selected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "payrollServices":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "selected";
+          this.project7 = "unselected";
+          this.project8 = "unselected";
+          break;
+        case "consultingServices":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "selected";
+          this.project8 = "unselected";
+          break;
+        case "financialPartner":
+          this.Default = "unselected";
+          this.project1 = "unselected";
+          this.project2 = "unselected";
+          this.project3 = "unselected";
+          this.project4 = "unselected";
+          this.project5 = "unselected";
+          this.project6 = "unselected";
+          this.project7 = "unselected";
+          this.project8 = "selected";
+          break;
+        default:
+          break;
       }
     },
+  },
+  mounted() {
+    const path = this.$router.history.current.params.pathMatch;
+    if (path == "EnterpriseService/companyTaxReturn") {
+      this.btn = "companyTaxReturn";
+    }
   },
 };
 </script>

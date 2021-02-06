@@ -9,30 +9,7 @@
           关于SINP
         </div>
       </div>
-      <div class="service-selection px-3 fs-6" :class="project1" @click="toService1">
-        <div v-if="this.$store.getters.lan">
-          Foreign assets declaration
-        </div>
-        <div v-else>
-         海外资产申报
-        </div>
-      </div>
-      <div class="service-selection px-3 fs-6" :class="project2" @click="toService2">
-        <div v-if="this.$store.getters.lan">
-          Self-employment tax return
-        </div>
-        <div v-else>
-          自雇纳税申报
-        </div>
-      </div>
-      <div class="service-selection px-3 fs-6" :class="project3" @click="toService3">
-        <div v-if="this.$store.getters.lan">
-          Tax return of Non-resident for tax purpose
-        </div>
-        <div v-else>
-          非税务居民的报税
-        </div>
-      </div>
+      <!--  -->
     </div>
   </div>
 </template>
@@ -42,56 +19,19 @@ export default {
   data() {
     return {
       Default:"selected",
-      project1: "unselected",
-      project2: "unselected",
-      project3: "unselected",
       btn:""
     };
   },
   methods: {
     toDefault(){
-      this.selectService("personalDefault");
-    },
-    toService1() {
-      this.selectService("ForeignAssetsDeclaration");
-    },
-    toService2() {
-      this.selectService("SelfemploymentTaxReturn");
-    },
-    toService3() {
-      this.selectService("TaxReturnofNonresident");
+      this.selectService("SINP");
     },
     selectService(data) {
       this.$emit("toggleService", data);
       this.btn = data;
     },
   },
-  watch: {
-    btn(newValue) {
-      console.log(newValue);
-      if (this.btn == "ForeignAssetsDeclaration") {
-        this.project1 = "selected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.default = "unselected";
-      } else if (this.btn == "SelfemploymentTaxReturn") {
-        this.project1 = "unselected";
-        this.project2 = "selected";
-        this.project3 = "unselected";
-        this.default = "unselected";
-      } else if (this.btn == "TaxReturnofNonresident") {
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "selected";
-        this.default = "unselected";
-      } else if (this.btn == "personalDefault") {
-        this.project1 = "unselected";
-        this.project2 = "unselected";
-        this.project3 = "unselected";
-        this.Default = "selected";
-      }
-    },
-  },
+
 };
 </script>
 

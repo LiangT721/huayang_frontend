@@ -29,7 +29,7 @@
     </div>
     <div class="service">
       <img src="../assets/service4.jpg" alt="" />
-      <div class="service-name">
+      <div class="service-name" @click="toCompanyTaxReturn">
         <div v-if="this.$store.getters.lan">
           {{ this.$store.state.homepage_project.project4.eng }}
         </div>
@@ -51,6 +51,9 @@ export default {
     toSINP() {
       this.$router.push("/service/SINP");
     },
+    toCompanyTaxReturn() {
+      this.$router.push("/service/EnterpriseService/companyTaxReturn")
+    }
   },
 };
 </script>
@@ -78,6 +81,7 @@ export default {
     object-fit: cover;
   }
   .service-name {
+    cursor: pointer;
     > div {
       font-family: $title;
       font-size: 1rem;

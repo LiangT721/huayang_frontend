@@ -2,8 +2,8 @@
   <div class="about">
     <page-header />
     <section class="row py-5 px-0 m-auto container-sm">
-      <img src="../assets/about.jpg" alt="" class="pc-img d-none d-xxl-block col-xxl-5 align-self-center">
-      <div class="row p-0 m-0 offset-xxl-1 col-xxl-6 mx-xxl-auto">
+      <img src="../assets/about.jpg" alt="" class="pc-img d-none d-xl-block col-xl-5 align-self-center">
+      <div class="row p-0 m-0 offset-xl-1 col-xl-6 mx-xl-auto">
         <div class="title fs-1 text-center text-uppercase">
           <div v-if="this.$store.getters.lan" class="container">
             <h1 class="text-center">About Us</h1>
@@ -12,7 +12,7 @@
             <h1 class="text-center pt-5">用我们的专业, 助力您的成功 !</h1>
           </div>
         </div>
-        <img class="py-5 px-0 col-md-6 offset-md-3 d-xxl-none" src="../assets/about.jpg" alt="" />
+        <img class="py-5 px-0 col-md-6 offset-md-3 d-xl-none" src="../assets/about.jpg" alt="" />
         <div class="container-sm text-center text-md-start">
           <div v-if="this.$store.getters.lan" class="container">
             <p class="content fs-5 ">
