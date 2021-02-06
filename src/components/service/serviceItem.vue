@@ -2,7 +2,7 @@
   <div class="service-items container-lg py-5">
     <!-- sdsdsds -->
     <div class="container d-xl-flex  justify-content-xl-between">
-      <div class="service-item mx-auto pb-5" @click="toPersonalTaxService">
+      <div class="service-item mx-auto pb-5" >
         <img  src="../../assets/service1.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -20,14 +20,14 @@
             {{ this.$store.state.service_project.project1.description.chi }}
           </div>
         </div>
-        <div class="more ms-3 ms-lg-0">
+        <div class="more ms-3 ms-lg-0" @click="toPersonalTaxService">
           <u>
             <div v-if="this.$store.getters.lan">More Information</div>
             <div v-else>获取更多信息</div></u
           >
         </div>
       </div>
-      <div class="service-item mx-auto pb-5" @click="toEnterpriseService">
+      <div class="service-item mx-auto pb-5" >
         <img src="../../assets/service2.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -45,14 +45,14 @@
             {{ this.$store.state.service_project.project2.description.chi }}
           </div>
         </div>
-        <div class="more ms-3 ms-lg-0">
+        <div class="more ms-3 ms-lg-0" @click="toEnterpriseService">
           <u>
             <div v-if="this.$store.getters.lan">More Information</div>
             <div v-else>获取更多信息</div></u
           >
         </div>
       </div>
-      <div class="service-item mx-auto pb-5" @click="toSINP">
+      <div class="service-item mx-auto pb-5" >
         <img src="../../assets/service3.jpg" alt="" class="service-image w-100" />
         <div class="service-title py-3 text-center">
           <div v-if="this.$store.getters.lan">
@@ -70,7 +70,7 @@
             {{ this.$store.state.service_project.project3.description.chi }}
           </div>
         </div>
-        <div class="more ms-3 ms-lg-0">
+        <div class="more ms-3 ms-lg-0" @click="toSINP"> 
           <u>
             <div v-if="this.$store.getters.lan">More Information</div>
             <div v-else>获取更多信息</div></u
