@@ -2,7 +2,7 @@
   <div class="about page-setting">
     <page-header />
     <section class="row py-5 px-0 m-auto container-sm">
-      <img src="../assets/about.jpg" alt="" class="pc-img d-none d-xl-block col-xl-5 align-self-center w-xl-30">
+      <img src="../assets/about.jpg" alt="" class="pc-img d-none d-xl-block col-xl-5 align-self-center w-xl-30 cover">
       <div class="row p-0 m-0 col-xl-7 ps-xl-5 mx-auto">
         <div class="title title-font text-center text-uppercase ">
           <div v-if="this.$store.getters.lan" class="container">
@@ -61,5 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.pc-img{
+  height: 30vw;
+}
 </style>
