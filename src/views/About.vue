@@ -12,7 +12,7 @@
             <h1 class="text-center pt-5">用我们的专业, 助力您的成功 !</h1>
           </div>
         </div>
-        <img class="py-5 px-0 col-md-6 offset-md-3 d-xl-none" src="../assets/about.jpg" alt="" />
+        <img class="mobile-about-img py-5 px-0 col-md-6 offset-md-3 d-xl-none img-cover" src="../assets/about.jpg" alt="" />
         <div class="container-sm text-font text-center text-md-start lh-lg">
           <div v-if="this.$store.getters.lan" class="container">
             <p class="content ">
@@ -61,7 +61,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pc-img{
-  height: 30vw;
+@media only screen and (min-width: 768px) {
+    .mobile-about-img {
+        height: 45vw;
+    }
 }
+
 </style>
