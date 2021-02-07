@@ -1,5 +1,5 @@
 <template>
-  <div class="home page">
+  <div class="page-setting">
     <page-header />
     <home-slider />
     <home-story />
@@ -27,18 +27,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style.scss";
-
-.home{
-  position: relative;
-  padding-bottom: 22em;
-}
-@media only screen and (min-width: 768px) {
-  .home{
-  padding-bottom: 12em;
-}
-
-}
-@media only screen and (min-width: 1280px) {}
-
 </style>

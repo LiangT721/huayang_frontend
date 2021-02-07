@@ -1,4 +1,4 @@
-$theme-colors: ( "primary": #002766, "danger": #ff4136);
+$theme-colors: ( "primary": #002766, "secondary": #A7C6E6);
 $barColor: #002766;
 $pageTopBarColor:#f7d6e0; // $barColor: #001641;
 $darkColor:#002766;
@@ -6,15 +6,108 @@ $bgc: #fff;
 $bgcBlue:#A7C6E6;
 $fontBlue:#3157A7;
 $fontGray:#5c677d;
-$title: 'Cabin';
-$text: 'Rubik';
-$shadow: filter;
-.title-family {
+.title-font {
     font-family: 'Cabin';
+    font-size: 1.5rem;
 }
 
-.text-family {
+.text-font {
     font-family: 'Rubik';
+    font-size: 1rem;
 }
 
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss"
+.page-setting {
+    min-height: 100vh;
+    padding-bottom: 22em;
+    position: relative;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+h1 {
+    font-family: $title;
+}
+
+.l1 {
+    width: 90%;
+    margin-left: 10%;
+}
+
+.l2 {
+    margin-top: 0.5em;
+    width: 95%;
+    // margin-left: 1%;
+}
+
+.l3 {
+    margin: 0.5em 0;
+    width: 90%;
+    margin-left: 5%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1em;
+}
+
+.col1 {
+    font-weight: bold;
+}
+
+th {
+    background-color: #002766;
+    color: white;
+}
+
+table {
+    margin-left: -5%;
+    font-size: 0.8rem;
+}
+
+span {
+    margin-left: -10%;
+}
+
+button {
+    a {
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-setting {
+        padding-bottom: 12em;
+    }
+    .w-md-50 {
+        width: 50% !important;
+    }
+    .w-md-75 {
+        width: 75% !important;
+    }
+    .h-md-75 {
+        height: 75% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title-font {
+        font-size: 2rem;
+    }
+    .text-font {
+        font-size: 1.2rem;
+    }
+    .w-xl-30 {
+        width: 30% !important;
+    }
+}
+
+@import "../../../bootstrap-5.0.0-beta1/scss/bootstrap.scss"

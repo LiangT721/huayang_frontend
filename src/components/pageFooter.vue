@@ -19,7 +19,7 @@
             <img src="../assets/email.png" alt="" />
           </div>
           <a href="mailto:yang.gao@youngsaccounting.ca"
-            >yang.gao@ youngsaccounting.ca</a
+            >info@youngsaccounting.ca</a
           >
         </div>
         <div class="address">

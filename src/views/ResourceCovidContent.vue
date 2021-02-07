@@ -1,5 +1,5 @@
 <template>
-  <div class="res-cov-con">
+  <div class="res-cov-con page-setting">
     <page-header />
     <resource-bar />
     <!-- <bread-crumb /> -->
@@ -48,34 +48,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style.scss";
 
-.res-cov-con {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 25em;
-}
-.content{
-  font-family: $text;
-  font-size: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .res-cov-con {
-    padding-bottom: 15em;
-  }
-  .content{
-  font-family: $text;
-  font-size: 1.2rem;
-}
-}
-@media only screen and (min-width: 1280px) {
-  .res-cov-con {
-    padding-bottom: 13em;
-  }
-  .content{
-  font-family: $text;
-  font-size: 1.2rem;
-}
-}
 </style>

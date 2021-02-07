@@ -1,5 +1,5 @@
 <template>
-  <div class="res-news">
+  <div class="res-news page-setting">
     <page-header />
     <resource-bar />
     <!-- <bread-crumb /> -->
@@ -20,15 +20,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.res-news {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 25em;
-}
 
-@media only screen and (min-width: 768px) {
-  .res-news {
-    padding-bottom: 15em;
-  }
-}
 </style>

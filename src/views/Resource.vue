@@ -1,5 +1,5 @@
 <template>
-  <div class="resource">
+  <div class="resource page-setting">
     <page-header />
     <resource-bar />
     <!-- <bread-crumb /> -->
@@ -26,19 +26,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.resource {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 25em;
-}
-@media only screen and (min-width: 768px) {
-    .resource{
-        padding-bottom:15em
-    }
-}
-@media only screen and (min-width: 1280px) {
-    .resource{
-        padding-bottom:15em
-    }
-}
+
 </style>

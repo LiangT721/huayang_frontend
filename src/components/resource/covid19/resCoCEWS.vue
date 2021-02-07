@@ -1,260 +1,205 @@
 <template>
   <div class="container-sm">
     <div v-if="this.$store.getters.lan">
-      <h1 class="text-center col-8 offset-2 py-5">The Canada Emergency Wage Subsidy (CEWS) – 75%</h1>
-      <p class="col-10 offset-1">
-        The new Canada Emergency Wage Subsidy (CEWS) provides a 75% wage subsidy
-        to eligible employers for up to 24 weeks, retroactive to March 15, 2020.
-        <br />
-        <br />
-        The grant is available since Monday on the Canada Revenue Agency’s
-        website. You can access it through "My Business Account".
-        <br />
-        <br />
-        Employers who meet the eligibility conditions for temporary wage subsidy
-        to 10% of employees, must deduct from Canada's emergency wage subsidy
-        (75%) the amounts to which they are entitled under the temporary wage
-        subsidy for employees the same period.
-        <br />
-        <br />
-        If an eligible employer completes their CEWS application and does not
-        enter any amount for the 10% temporary wage subsidy, the CEWS will be
-        determined as if the employer is electing 0% as the prescribed
-        percentage for calculating their 10% temporary wage subsidy and
-        requesting the maximum CEWS.
+      <h1 class="text-center col-8 offset-2 py-5">
+        The Canada Emergency Wage Subsidy (CEWS) – 75%
+      </h1>
+      <p class="col-10 offset-1 text-font">
+        The Canada Emergency Wage Subsidy (CEWS) provides an up to 75% wage
+        subsidy to eligible employers.
+      </p>
+      <p class="col-10 offset-1 text-font">
+        <b> CHANGES</b> to CEWS as of January 6, 2021:
+      </p>
+      <p class="col-10 offset-1 text-font">
+        details for claim periods 11 to 13 (December 20, 2020, to March 13,
+        2021):
+      </p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>the maximum top-up subsidy rate is 35%</li>
+        <li>
+          the maximum subsidy amount for employees on leave with pay is $595
+        </li>
+        <li>
+          the base revenue drop-comparison months for period 11 will be the same
+          as period 10
+        </li>
+      </ul>
+      <p class="col-10 offset-1 text-font">
+        The grant is available on the Canada Revenue Agency’s website. You can
+        access it through "My Business Account".
       </p>
       <h2 class="col-10 offset-1">Eligibility</h2>
-      <ul class="l1">
-        <li>
-          Eligibility for the CEWS of an employee's remuneration is available to
-          employees other than those who have been without remuneration for 14
-          or more consecutive days in the eligibility period, i.e., from March
-          15 to April 11, from April 12 to May 9, or from May 10 to June 6, from
-          June 7 to July 4, from July 5 to August 1,, or from August 2 to August
-          29.
-        </li>
+      <ul class="col-10 offset-1 text-font" >
+        <li>Have had a CRA payroll account on March 15, 2020</li>
         <li>
           Applies to small, medium and large businesses, not-for-profit
           organizations and charities, except for public sector entities,
           regardless of the number of employees.
         </li>
-        <li>
-          Those that see a drop of at least 15% of their revenue in March 2020
-          and 30% for the following months (see Eligible Periods).
-        </li>
+        <li>Have experienced a drop in revenue</li>
       </ul>
       <h2 class="col-10 offset-1">Amount of Subsidy</h2>
-      <ul class="l1">
-        <li>
-          The subsidy amount for a given employee on eligible remuneration paid
-          for a claim period (between March 15 and August 29, 2020) is the
-          greater of:
-        </li>
-        <ul class="l2">
-          <li>
-            75% of the amount of remuneration paid, up to a maximum benefit of
-            $847 per week; and
-          </li>
-          <li>
-            the amount of remuneration paid, up to a maximum benefit of $847 per
-            week or 75% of the employee's pre-crisis weekly remuneration,
-            whichever is less.
-          </li>
-        </ul>
-        <li>
-          Employers may be eligible for a subsidy of up to 100% of the first 75%
-          of pre-crisis wages or salaries of existing employees.
-        </li>
-        <li>
-          Employers will also be eligible for a subsidy of up to 75% of salaries
-          and wages paid to new employees.
-        </li>
-        <li>
-          A special rule will apply to employees that do not deal at arm’s
-          length with the employer. The subsidy amount for such employees will
-          be limited to the eligible remuneration paid in any pay period between
-          March 15 and August 29, 2020, up to a maximum benefit of $847 per week
-          or 75% of the employee’s pre-crisis weekly remuneration;
-        </li>
+      <p class="col-10 offset-1 text-font">
+        CRA provides an online calculator to help you know the amount of
+        subsidy. CRA recommend using it before claim. Here is the link:
+        <a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy/cews-calculate-subsidy-amount.html"> https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy/cews-calculate-subsidy-amount.html</a>
+      </p>
+      <h2 class="col-10 offset-1">Eligible revenue</h2>
+      <p class="col-10 offset-1 text-font">
+        Eligible revenue generally includes revenue earned in Canada from:
+      </p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>selling goods</li>
+        <li>rendering services, and</li>
+        <li>others' use of your resources</li>
       </ul>
-      <h2 class="col-10 offset-1">Calculating Revenues</h2>
-      <ul class="l1">
-        <li>
-          In recognition that the time between when revenue is earned and when
-          it is paid could be highly variable in certain sectors of the economy,
-          it is proposed that employers be allowed to measure revenues either:
-        </li>
-        <ul class="l2">
-          <li>on the basis of accrual accounting (as they are earned); or</li>
-          <li>
-            cash accounting (as they are received). Special rules would also be
-            provided to address issues for corporate groups, non-arm’s length
-            entities and joint ventures.
-          </li>
-        </ul>
-        <li>
-          For registered charities and not-for-profit organizations, it will be
-          allowed to choose to include or exclude government funding in their
-          revenues for the purpose of applying the revenue reduction test.
-        </li>
-      </ul>
+      <p class="col-10 offset-1 text-font">
+        Generally, you should use your normal accounting method when calculating
+        your eligible revenue. If your normal accounting method is the accrual
+        method, you can elect to use the cash method (and vice versa), but once
+        you choose you must use the same accounting method for all your claims.
+      </p>
       <h2 class="col-10 offset-1">Eligible Periods</h2>
-      <ul class="l1">
+      <ul class="col-10 offset-1 text-font" >
         <li>
-          Eligibility is determined by the change in an eligible employer's
-          monthly revenues, year-over-year, for the calendar month in which the
-          period began.
+          Each CEWS claim period is a specific period of 4 weeks, beginning on
+          a Sunday.
         </li>
         <li>
-          All employers are allowed to calculate their change in revenue using
-          an alternative benchmark to determine their eligibility. This provides
-          more flexibility to employers for which the general approach may not
-          be appropriate, including high-growth firms, sectors that faced
-          difficulties in 2019, non-profits and charities, as well as employers
-          established after February 2019.
-        </li>
-        <li>
-          Under this alternative approach, employers are allowed to compare
-          their revenue using an average of their revenue earned in January and
-          February 2020.
-        </li>
-        <li>
-          The amount of wage subsidy (provided under the COVID-19 Economic
-          Response Plan) received by the employer in a given month is ignored
-          for the purpose of measuring year-over-year changes in monthly
-          revenues.
-        </li>
-        <ul class="l2">
-          <li>
-            For example, if revenues in March 2020 were down 20% compared to
-            March 2019, the employer would be allowed to claim the CEWS (as
-            calculated above) on remuneration paid between March 15 and April
-            11, 2020, as well as between April 12 to May 9.
-          </li>
-          <li>
-            Alternatively, this employer could use its average revenue from the
-            months of January and February 2020, instead of March 2019, to
-            determine if it is eligible for the CEWS.
-          </li>
-          <li>
-            Once an approach is chosen, the employer would have to apply it
-            throughout the program period.
-          </li>
-        </ul>
-      </ul>
-      <p class="col-10 offset-1">
-        By qualifying at the level of income decline in a particular period, you
-        automatically qualify for the following period. The table below outlines
-        first three claiming period, the required reduction in revenue and the
-        reference period for eligibility:
-      </p>
-      <table class="col-xxl-10 offset-xxl-1 ms-1 ms-xxl-5">
-        <tr>
-          <th></th>
-          <th>Claiming period</th>
-          <th>Required reduction in revenue</th>
-          <th>Reference period for eligibility</th>
-        </tr>
-        <tr>
-          <td class="col1">Periode 1</td>
-          <td>March 15 to April 11</td>
-          <td>15 %</td>
-          <td>
-            <p class="col-10 offset-1">March 2020 over:</p>
-            <ul class="l1">
-              <li>March 2019 or</li>
-              <li>Average of January and February 2020</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td class="col1">Periode 2</td>
-          <td>April 12 to May 9</td>
-          <td>30 %</td>
-          <td>
-            <p class="col-10 offset-1">Eligible for Period 1</p>
-            <p class="col-10 offset-1"><b>OR</b></p>
-            <p class="col-10 offset-1">April 2020 over:</p>
-            <ul class="l1">
-              <li>April 2019 or</li>
-              <li>Average of January and February 2020</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td class="col1">Periode 3</td>
-          <td>May 10 to June 6</td>
-          <td>30 %</td>
-          <td>
-            <p class="col-10 offset-1">Eligible for Period 2 OR May 2020 over:</p>
-            <ul class="l1">
-              <li>May 2019 or</li>
-              <li>Average of January and February 2020</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-      <h2 class="col-10 offset-1">Refund for Certain Payroll Contributions</h2>
-      <ul class="l1">
-        <li>
-          100% refund for certain employer-paid contributions to Employment
-          Insurance, the Canada Pension Plan, the Quebec Pension Plan, and the
-          Quebec Parental Insurance Plan, and the health services fund.
-        </li>
-        <li>
-          This refund covers 100% of employer-paid contributions for eligible
-          employees for each week throughout which those employees are on leave
-          with pay and for which the employer is eligible to claim for the CEWS
-          for those employees.
-        </li>
-        <li>
-          In general, an employee will be considered to be on leave with pay
-          throughout a week if that employee is remunerated by the employer for
-          that week but does not perform any work for the employer in that week.
-          This refund is not be available for eligible employees that are on
-          leave with pay for only a portion of a week.
-        </li>
-        <li>
-          Employers are required to continue to collect and remit employer and
-          employee contributions to each program as usual. Eligible employers
-          apply for a refund, as described above, at the same time that they
-          apply for the CEWS.
-        </li>
-        <li>
-          This refund would not be subject to the weekly maximum benefit per
-          employee of $847 that an eligible employer may claim in respect of the
-          CEWS. There would be no overall limit on the refund amount that an
-          eligible employer may claim.
+          The wage subsidy does not renew automatically. Each period, you must
+          confirm that you're eligible and calculate your amount according to
+          that period's rules before you apply.
         </li>
       </ul>
+      <h3 class="col-10 offset-1 py-3">
+        Current Claim Period <br /> <br>
+        Period 11: December 20, 2020 to January 16, 2021
+      </h3>
+      <h3 class="col-10 offset-1 py-3">
+        Next Claim Period <br /> <br>
+        Period 12: January 17 to February 13, 2021
+      </h3>
       <h2 class="col-10 offset-1">How to Apply</h2>
-      <ul class="l1">
+      <p class="col-10 offset-1 text-font">
+        Eligible employers will be able to apply for the CEWS through the Canada
+        Revenue Agency's My Business Account portal. Employers will need to keep
+        records demonstrating their reduction in arm's-length revenues and
+        remuneration paid to employees.
+      </p>
+      <p class="col-10 offset-1 text-font">There are three ways to apply:</p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>apply using My Business Account</li>
         <li>
-          Eligible employers will be able to apply for the CEWS through the
-          Canada Revenue Agency's My Business Account portal. Employers will
-          need to keep records demonstrating their reduction in arm's-length
-          revenues and remuneration paid to employees. More details about the
-          application process will be made available shortly.
+          Business representatives may apply using Represent a Client <br /> <br>
+          Note: Only representatives authorized at Level 2 or 3 will be able to
+          apply
         </li>
         <li>
-          The funds will be paid within 3 to 6 weeks from April 1, 2020. Signing
-          up for direct deposit is recommended for businesses to speed up the
-          process;10% Wage SubsidyThe employers that do not qualify for the
-          Canada Emergency Wage Subsidy may continue to qualify for the 10% of
-          remuneration paid from March 18 to before June 20, up to a maximum
-          subsidy of $1,375 per employee and $25,000 per employer.
+          If neither is an option for you, use the Web Forms application using
+          your web access code (WAC)
         </li>
       </ul>
-      <h2 class="col-10 offset-1">10% Wage Subsidy</h2>
-      <p class="col-10 offset-1">
-        The employers that do not qualify for the Canada Emergency Wage Subsidy
-        may continue to qualify for the 10% of remuneration paid from March 18
-        to before June 20, up to a maximum subsidy of $1,375 per employee and
-        $25,000 per employer.
+      <h2 class="col-10 offset-1">After applying</h2>
+      <p class="col-10 offset-1 text-font">
+        You can generally expect to receive your payment within 3 to 8 days if
+        you are registered for direct deposit on your payroll account. If you
+        are not registered for direct deposit, please allow additional time for
+        a cheque to be delivered by mail to the address on your payroll account.
+        In some cases, we may need to delay your payment if we need to contact
+        you for additional review of your claim.
       </p>
-      <button class="btn btn-secondary col-10 offset-1"><b><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html">The Canada Emergency Wage Subsidy</a></b></button>
+      <p class="col-10 offset-1 text-font">
+        The CEWS is paid by direct deposit or by cheque.
+      </p>
     </div>
-    <div v-else></div>
+    <div v-else>
+       <h1 class="text-center col-8 offset-2 py-5">
+        加拿大紧急工资补贴（CEWS）– 75％
+      </h1>
+      <p class="col-10 offset-1 text-font">
+       加拿大紧急工资补贴（CEWS）向符合条件的雇主提供高达75％的工资补贴。
+      </p>
+      <p class="col-10 offset-1 text-font">
+        自2021年1月6日起对CEWS做出以下更改：
+      </p>
+      <p class="col-10 offset-1 text-font">
+        补贴期11至13（2020年12月20日至2021年3月13日）：
+      </p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>最高补足的补贴率为35％</li>
+        <li>
+          带薪休假的雇员的最高补贴额为$ 595
+        <li>
+         补贴期11的基本收入下降比较月将与补贴期10相同
+        </li>
+      </ul>
+      <p class="col-10 offset-1 text-font">
+        该补贴计划可在加拿大税务局的网站上找到。您可以通过“我的商业帐户”访问它。
+      </p>
+      <h2 class="col-10 offset-1">什么企业能够符合申请的资格</h2>
+      <ul class="col-10 offset-1 text-font" >
+        <li>于2020年3月15日拥有CRA工资单帐户</li>
+        <li>
+         适用于小型，中型和大型企业，非营利组织和慈善机构，公共部门实体除外，无论雇员人数多大。
+        </li>
+        <li>遭遇了收入下降的情况</li>
+      </ul>
+      <h2 class="col-10 offset-1">补贴金额</h2>
+      <p class="col-10 offset-1 text-font">
+        CRA提供了一个在线计算器，可帮助您了解可获得的补贴金额。 CRA建议在申请前使用它来做初步预估。这是链接：<a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy/cews-calculate-subsidy-amount.html"> https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy/cews-calculate-subsidy-amount.html</a>
+      </p>
+      <h2 class="col-10 offset-1">符合条件的收入</h2>
+      <p class="col-10 offset-1 text-font">
+        符合条件的收入通常包括在加拿大从以下方面获得的收入：
+      </p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>销售商品</li>
+        <li>提供服务，以及</li>
+        <li>他人对您资源的使用</li>
+      </ul>
+      <p class="col-10 offset-1 text-font">
+        通常，在计算符合条件的收入时，应使用常规会计方法。如果通常的会计方法是权责发生制，则可以选择使用现金方法（反之亦然），但是一旦选择，就必须对该补贴计划的所有申请期都使用相同的会计方法。
+      </p>
+      <h2 class="col-10 offset-1">可以申请的周期</h2>
+      <ul class="col-10 offset-1 text-font" >
+        <li>
+         每个CEWS补贴申请期为特定的4个星期，从星期日开始。
+        </li>
+        <li>
+         紧急工资补贴不会自动更新。每个期间，您都必须确认自己有资格，并根据该期间的规则计算您的金额，然后再申请。</li>
+      </ul>
+      <h3 class="col-10 offset-1 py-3">
+       当前可以申请的周期<br /> <br>
+       期间11：2020年12月20日至2021年1月16日
+      </h3>
+      <h3 class="col-10 offset-1 py-3">
+       下一个可以申请的周期<br /> <br>
+       期间12：2021年1月17日至2月13日
+      </h3>
+      <h2 class="col-10 offset-1">如何申请</h2>
+     
+      <p class="col-10 offset-1 text-font">有三种申请方法：</p>
+      <ul class="col-10 offset-1 text-font" >
+        <li>使用“我的商业帐户”申请</li>
+        <li>
+          授权代表可以使用“代表客户”申请（注意：只有2级或3级授权代表才能申请）
+        </li>
+        <li>
+          如果以上两种方式都不适合您，请通过Web访问代码（WAC）使用Web文件的申请方式
+        </li>
+      </ul>
+      <p class="col-10 offset-1 text-font">
+        雇主将需要保存记录，以证明他们减少了与雇员的公平收入和报酬。
+      </p>
+      <h2 class="col-10 offset-1">申请后</h2>
+      <p class="col-10 offset-1 text-font">
+        如果您已注册直接存入工资帐户，通常可以在3至8天内收到补贴款。如果您没有注册直接存入工资账户，将需要更多时间通过邮寄支票到工资单帐户上的地址。在某些情况下，如果我们需要与您联系以进一步审查您的申请，可能会遭遇延迟。
+      </p>
+      <p class="col-10 offset-1 text-font">
+        通常来说，CEWS通过直接存款或支票支付。
+      </p>
+    </div>
   </div>
 </template>
 
@@ -263,48 +208,48 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "../../../assets/style.scss";
-h1 {
-  font-family: $title;
-}
-.l1 {
-  width: 90%;
-  margin-left: 5%;
-}
-.l2 {
-  margin-top: 0.5em;
-  width: 95%;
-  // margin-left: 1%;
-}
-.l3 {
-  margin: 0.5em 0;
-  width: 90%;
-  margin-left: 5%;
-}
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 1em;
-}
-.col1 {
-  font-weight: bold;
-}
-th {
-  background-color: #002766;
-  color: white;
-}
-table {
-  margin-left: -5%;
-  font-size: 0.8rem;
-}
-span {
-  margin-left: -10%;
-}
-button{
-    a{
-        color: white;
-    }
-}
+// @import "../../../assets/style.scss";
+// h1 {
+//   font-family: $title;
+// }
+// .l1 {
+//   width: 90%;
+//   margin-left: 10%;
+// }
+// .l2 {
+//   margin-top: 0.5em;
+//   width: 95%;
+//   // margin-left: 1%;
+// }
+// .l3 {
+//   margin: 0.5em 0;
+//   width: 90%;
+//   margin-left: 5%;
+// }
+// table,
+// th,
+// td {
+//   border: 1px solid black;
+//   border-collapse: collapse;
+//   padding: 1em;
+// }
+// .col1 {
+//   font-weight: bold;
+// }
+// th {
+//   background-color: #002766;
+//   color: white;
+// }
+// table {
+//   margin-left: -5%;
+//   font-size: 0.8rem;
+// }
+// span {
+//   margin-left: -10%;
+// }
+// button {
+//   a {
+//     color: white;
+//   }
+// }
 </style>

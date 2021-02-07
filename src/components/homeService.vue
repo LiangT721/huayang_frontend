@@ -1,5 +1,5 @@
 <template>
-  <div class="home-service row mx-auto px-md-5 col-xl-6 mx-xl-0 ">
+  <div >
     <div class="service col-6 py-3 text-center col-md-5 mx-auto ">
       <img class="img" src="../assets/service1.jpg" alt="" />
       <div class="service-name fw-bold py-1 py-md-4 fs-6" @click="toPersonalTaxService">
@@ -68,68 +68,8 @@ export default {
 @media only screen and (min-width: 1200px) {
   .img {
     object-fit: cover;
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
   }
 }
-// .home-service {
-//   margin-top: 5em;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   width: 90vw;
-//   margin-left: 5vw;
-//   align-items: center;
-//   justify-items: center;
-//   row-gap: 2em;
-// }
-// .service {
-//   width: 30vw;
-//   display: grid;
-//   justify-items: center;
-//   img {
-//     width: 100%;
-//     height: 30vw;
-//     object-fit: cover;
-//   }
-//   .service-name {
-//     cursor: pointer;
-//     > div {
-//       font-family: $title;
-//       font-size: 1rem;
-//       font-weight: bold;
-//     }
-//   }
-// }
-// @media only screen and (min-width: 768px) {
-//   .home-service {
-//     width: 70vw;
-//     margin-left: 15vw;
-//   }
-//   .service {
-//     width: 25vw;
-
-//     img {
-//       height: 25vw;
-//     }
-//     .service-name {
-//       > div {
-//         margin-top: 1em;
-//         font-size: 1.2rem;
-//       }
-//     }
-//   }
-// }
-// @media only screen and (min-width: 1280px) {
-//   .home-service {
-//     width: 80%;
-//     margin-left: 15%;
-//     column-gap: 10%;
-//   }
-//   .service {
-//     width: 15vw;
-//     img {
-//       height: 15vw;
-//     }
-//   }
-// }
 </style>

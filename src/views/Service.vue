@@ -1,5 +1,5 @@
 <template>
-  <div class="service-page">
+  <div class="service-page page-setting">
     <page-header />
     <div class="about-service pb-md-5">
       <h1 class="about-title container-sm text-center py-5">
@@ -33,20 +33,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
-.service-page {
-  min-height: 100vh;
-  box-sizing: border-box;
-  position: relative;
-  padding-bottom: 25em;
-}
-@media only screen and (min-width: 768px) {
-  .service-page {
-    padding-bottom: 15em;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .service-page {
-    padding-bottom: 15em;
-  }
-}
+
 </style>

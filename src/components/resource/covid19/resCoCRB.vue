@@ -2,23 +2,23 @@
   <div class="container-sm">
     <div v-if="this.$store.getters.lan">
       <h1 class="text-center col-8 offset-2 py-5">The Canada Recovery Benefit (CRB)</h1>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         The Canada Recovery Benefit (CRB) gives income support to employed and
         self-employed individuals who are directly affected by COVID-19 and are
         not entitled to Employment Insurance (EI) benefits. The CRB is
         administered by the Canada Revenue Agency (CRA).
       </p>
       <h2 class="col-10 offset-1">How much you receive per period</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         If you are eligible for the CRB, you can receive $1,000 ($900 after
         taxes withheld) for a 2-week period.
       </p>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         If your situation continues past 2 weeks, you will need to apply again.
         The CRB does not renew automatically. You must apply for each period
         separately.
       </p>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         The CRB is available for a maximum of 13 periods (26 weeks) between
         September 27, 2020 and September 25, 2021.
       </p>
@@ -26,12 +26,12 @@
         To be eligible for the CRB, you must meet all the following conditions
         for the 2-week period you're applying for:
       </h2>
-      <p class="col-10 offset-1">During the period you’re applying for:</p>
-      <ul class="l1">
+      <p class="col-10 offset-1 text-font">During the period you’re applying for:</p>
+      <ul class="col-10 offset-1 text-font">
         <li>
           You were not employed or self-employed for reasons related to COVID-19
         </li>
-        <p class="col-10 offset-1">or</p>
+        <p class="col-10 offset-1 text-font">or</p>
         <li>
           You had a 50% reduction in your average weekly income compared to the
           previous year due to COVID-19
@@ -44,8 +44,8 @@
             every period you apply for.
           </li>
         </ul>
-        <p class="col-10 offset-1"><b>How to calculate the 50% average weekly income:</b></p>
-        <p class="col-10 offset-1">
+        <p class="text-font"><b>How to calculate the 50% average weekly income:</b></p>
+        <p class="text-font">
           you earned $26, 000 by employment and/or self-employment income (in
           2019 or the last 12 months) ÷ 52(weeks)= $500 (average weekly income
           in 2019 or the last 12 months) ÷ 2= $250 (50% of the average weekly
@@ -91,33 +91,33 @@
         </li>
       </ul>
       <h2 class="col-10 offset-1">Periods start and end dates</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         Each 2-week period starts on a Sunday and ends on the Saturday of the
         following week. The earliest you can apply is on the
         <b> first Monday after</b> the period has ended.
       </p>
       <br />
-      <p class="col-10 offset-1"><b>Recent periods</b></p>
-      <ul class="l1">
+      <p class="col-10 offset-1 text-font"><b>Recent periods</b></p>
+      <ul class="col-10 offset-1 text-font">
         <li>January 3 to January 16, 2021 (Period 8)</li>
         <li>December 20, 2020 to January 2, 2021 (Period 7)</li>
         <li>December 6 to December 19, 2020 (Period 6)</li>
       </ul>
       <br />
-      <p class="col-10 offset-1"><b>Next period</b></p>
-      <p class="col-10 offset-1">January 17 to January 30, 2021 (Period 9)</p>
+      <p class="col-10 offset-1 text-font"><b>Next period</b></p>
+      <p class="col-10 offset-1 text-font">January 17 to January 30, 2021 (Period 9)</p>
       <br />
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         To confirm the number of periods that you have already received the CRB,
         you can review your application history in CRA My Account, under
         “COVID-19 Support Payment Application Details”.
       </p>
       <h2 class="col-10 offset-1">How to apply</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         Apply online through CRA My Account or by phone 1-800-959-2019 or
         1-800-959-2041, Monday to Sunday from 6 am to 3 am (Eastern time)
       </p>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         For more details, please visit:
         <a
           href="https://www.canada.ca/en/revenue-agency/services/benefits/recovery-benefit.htm"
@@ -129,31 +129,31 @@
     </div>
     <div v-else>
       <h1 class="text-center col-8 offset-2 py-5">加拿大复原福利（Canada Recovery Benefit）</h1>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         加拿大复原福利（CRB）是为受COVID-19直接影响且无权获得就业保险（EI）福利的受雇和自雇人士提供的收入支持。
         该福利由加拿大税务局（CRA）管理
       </p>
       <h2 class="col-10 offset-1">您可以申领到的金额</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         如果您符合申领CRB的资格，则可在两周内收到$ 1,000（预扣税后为$ 900）。
       </p>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         如果您的情况持续超过2周，则需要重新申请。
         CRB不会自动续申。您必须每个周期分别申请。从2020年9月27日到2021年9月25日，您最多可以申领13个周期的CRB（总计26周）。
       </p>
       <h2 class="col-10 offset-1">要符合申领CRB的资格，您必须在申请的2周内满足以下所有条件：</h2>
-      <p class="col-10 offset-1">在您申请的期间：</p>
-      <ul class="l1">
+      <p class="col-10 offset-1 text-font">在您申请的期间：</p>
+      <ul class="col-10 offset-1 text-font">
         <li>您因与COVID-19相关的原因而没有工作或自雇；</li>
-        <p class="col-10 offset-1">或者</p>
+        <p class="col-10 offset-1 text-font">或者</p>
         <li>由于COVID-19，与上一年相比，您的每周平均收入减少了50％。</li>
         <ul class="l2">
           <li>
             50%的减少是根据您2019年、2020年或之前的12年个月平均每周工资或者自雇净收入计算的，您将需要检查在您申请的每一个时期是否符合这些标准。
           </li>
         </ul>
-        <p class="col-10 offset-1"><b>如何计算每周平均收入的50％：</b></p>
-        <p class="col-10 offset-1">
+        <p class=" text-font"><b>如何计算每周平均收入的50％：</b></p>
+        <p class=" text-font">
           假设您在2019年或最近12个月的就业和/或自雇收入中赚了C$ 26，000
           ÷52（周）= 500加币（2019年或最近12个月的平均每周收入） ÷2 = $
           250（2019年或最近12个月平均每周收入的50％）
@@ -188,30 +188,30 @@
         <li>您在申请的两周内没有拒绝合理的工作</li>
       </ul>
       <h2 class="col-10 offset-1">申报周期开始和结束日期</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         每2周的时间段从星期日开始，到下周的星期六结束。您最早可以申请的时间是该期限结束后的第一个星期一。
       </p>
       <br />
-      <p class="col-10 offset-1"><b>最近可以申报的周期为</b></p>
-      <ul class="l1">
+      <p class="col-10 offset-1 text-font"><b>最近可以申报的周期为</b></p>
+      <ul class="col-10 offset-1 text-font">
         <li>2021年1月3日至1月16日（周期8）</li>
         <li>2020年12月20日至2021年1月2日（周期7）</li>
         <li>2020年12月6日至12月19日（周期6）</li>
       </ul>
       <br />
-      <p class="col-10 offset-1"><b>下一个周期为</b></p>
-      <p class="col-10 offset-1">2021年1月17日至1月30日（周期9）</p>
+      <p class="col-10 offset-1 text-font"><b>下一个周期为</b></p>
+      <p class="col-10 offset-1 text-font">2021年1月17日至1月30日（周期9）</p>
       <br />
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         要确认您已收到CRB的周期，您可以在“我的帐户”中的“
         COVID-19支持支付申请详细信息”下查看您的历史申请记录。
       </p>
       <h2 class="col-10 offset-1">如何申请</h2>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         通过CRA”我的帐户”在线申请
         或周一至周日上午6点至凌晨3点（东部时间）致电1-800-959-2019或1-800-959-2041
       </p>
-      <p class="col-10 offset-1">
+      <p class="col-10 offset-1 text-font">
         了解更多有关的详细信息，请访问
         <a
           href="https://www.canada.ca/en/revenue-agency/services/benefits/recovery-benefit.htm"

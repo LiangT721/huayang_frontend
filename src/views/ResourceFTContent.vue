@@ -1,5 +1,5 @@
 <template>
-  <div class="newspage">
+  <div class="newspage page-setting">
     <page-header />
     <resource-bar />
     <!-- <bread-crumb /> -->
@@ -51,19 +51,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style.scss";
-.newspage {
-  position: relative;
-  padding-bottom: 25em;
-}
-@media only screen and (min-width: 768px) {
-  .newspage {
-    padding-bottom: 15em;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .newspage {
-    padding-bottom: 15em;
-  }
-}
+
 </style>

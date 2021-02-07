@@ -1,6 +1,6 @@
 <template>
-  <div class="message container-sm my-5">
-    <h2 class="title text-center text-capitalize py-3">
+  <div class="message container-sm my-5 mt-md-0">
+    <h2 class="title text-center text-capitalize py-3 pt-md-0">
       <div v-if="this.$store.getters.lan">Leave your message</div>
       <div v-else>留言板</div>
     </h2>
@@ -119,7 +119,7 @@
             placeholder="Please leave your message"
           ></textarea>
           <label for="floatingInput" class="ps-4"
-            >请留下您想说的信息</label
+            >如有疑问，请留言</label
           >
         </div>
         <button class="btn btn-primary col-3 offset-7" @click="submit">

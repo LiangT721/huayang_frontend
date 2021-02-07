@@ -10,9 +10,24 @@
                 关于赠与子女和其他人的相关税务问题
             </div>
         </li>
-        <li class="list-item" @click="AlterEgoTrust">Six reasons to establish an Alter ego trust</li>
-        <li class="list-item" @click="TaxReturnInfo">报税基本信息以及文件清单</li>
-        <li class="list-item" @click="HoldingCompany">Do you need a holding company</li>
+        <li class="list-item" @click="AlterEgoTrust"><div v-if="this.$store.getters.lan">
+                Six reasons to establish an Alter ego trust
+            </div>
+            <div v-else>
+                建立Alter ego 信托的六个理由
+            </div></li>
+        <li class="list-item" @click="TaxReturnInfo"><div v-if="this.$store.getters.lan">
+               Preparation for tax return
+            </div>
+            <div v-else>
+                报税基本信息以及文件清单
+            </div></li>
+        <li class="list-item" @click="HoldingCompany"><div v-if="this.$store.getters.lan">
+               Do you need a holding company
+            </div>
+            <div v-else>
+              是否需要holding 公司
+            </div></li>
       </ul>
     </div>
   </div>

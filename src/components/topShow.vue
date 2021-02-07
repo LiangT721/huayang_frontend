@@ -1,6 +1,8 @@
 <template>
   <div class="top-show text-center">
-    <div class="phone">Phone: <a href="tel:3062611887">(306) 261-1887</a></div>
+    <div class="phone" v-if="this.$store.getters.lan">Phone: <a href="tel:3062611887">(306) 261-1887</a></div>
+
+    <div class="phone" v-else >电话: <a href="tel:3062611887">(306) 261-1887</a></div>
     <div class="language-set">
       <div class="btn">
         <div

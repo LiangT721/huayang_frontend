@@ -1,5 +1,5 @@
 <template>
-  <div class="service-items-page">
+  <div class="service-items-page page-setting">
     <page-header />
     <!-- <bread-crumb /> -->
     <div class="row container mx-auto">
@@ -112,19 +112,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.service-items-page {
-  min-height: 100vh;
-  padding-bottom: 25em;
-  position: relative;
-}
-@media only screen and (min-width: 768px) {
-  .service-items-page {
-    padding-bottom: 25em;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .service-items-page {
-    padding-bottom: 15em;
-  }
-}
 </style>
