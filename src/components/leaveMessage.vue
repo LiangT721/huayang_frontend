@@ -151,7 +151,7 @@ export default {
         console.log(this.email)
         console.log(this.content)
       axios.request({
-        url: "http://127.0.0.1:5000/message",
+        url: "http://143.110.222.230/api/message",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,10 +163,26 @@ export default {
           email: this.email,
           content: this.content,
         },
-      }).then((res)=>{
-          console.log(res)
-      }).catch((res)=>
-        console.log(res)
+      }).then(()=>{
+        this.first_name = "";
+        this.last_name = "";
+        this.phone = "";
+        this.email = "";
+        this.content = "";
+        if (this.$store.getters.lan){
+          alert("The message has been sent successfully！")
+        }else(
+          alert("留言已成功发送！")
+        )
+      }).catch(()=>{
+        if (this.$store.getters.lan){
+          alert("The message sent failed!")
+        }else(
+          alert("留言发送未成功！")
+        )
+
+      }
+        
       );
     },
   },
